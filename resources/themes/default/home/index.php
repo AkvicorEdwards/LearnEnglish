@@ -24,19 +24,21 @@
                     echo "<button   type=\"button\"  onclick=\"location.href='?mod=learning&method=EnterWord'\">录入</button>";
                 }else{
                     echo "<div></div>";echo "</br>";
-                    echo "<button  type=\"button\"  onclick=\"location.href='?mod=learning&method=1'\">单list全部</button>";
+                    echo "<button  type=\"button\"  onclick=\"location.href='?mod=learning&method=1'\">单List随机</button>";
                     echo "<div></div>";echo "</br>";
-                    echo "<button  type=\"button\"  onclick=\"location.href='?mod=learning&method=2'\">单list全部隐藏翻译</button>";
+                    echo "<button  type=\"button\" onclick=\"location.href='?mod=learning&method=2'\">单List顺序</button>";
                     echo "<div></div>";echo "</br>";
-                    echo "<button  type=\"button\"  onclick=\"location.href='?mod=learning&method=3'\">英语_随机</button>";
+                    echo "<button  type=\"button\"  onclick=\"location.href='?mod=learning&method=3'\">全List随机</button>";
                     echo "<div></div>";echo "</br>";
-                    echo "<button  type=\"button\"  onclick=\"location.href='?mod=learning&method=4'\">英语_困难随机</button>";
+                    echo "<button  type=\"button\"  onclick=\"location.href='?mod=learning&method=4'\">全List顺序</button>";
                     echo "<div></div>";echo "</br>";
-                    echo "<button  type=\"button\" onclick=\"location.href='?mod=learning&method=5'\">英语_list随机</button>";
+                    echo "<button  type=\"button\"  onclick=\"location.href='?mod=learning&method=5'\">单List困难单词随机</button>";
                     echo "<div></div>";echo "</br>";
-                    echo "<button  type=\"button\"  onclick=\"location.href='?mod=learning&method=6'\">英语_list顺序</button>";
+                    echo "<button  type=\"button\"  onclick=\"location.href='?mod=learning&method=6'\">单List困难单词顺序</button>";
                     echo "<div></div>";echo "</br>";
-                    echo "<button  type=\"button\"  onclick=\"location.href='?mod=learning&method=7'\">英语_困难list随机</button>";
+                    echo "<button  type=\"button\"  onclick=\"location.href='?mod=learning&method=7'\">全List困难单词随机</button>";
+                    echo "<div></div>";echo "</br>";
+                    echo "<button  type=\"button\"  onclick=\"location.href='?mod=learning&method=8'\">全List困难单词顺序</button>";
                     echo "<div></div>";echo "</br>";
                     echo "<input  placeholder=\"其他\"  disabled>";
 

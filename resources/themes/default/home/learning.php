@@ -41,37 +41,45 @@ if($method=="SelectList"){
 //    $lister -> setIsFalse();
 //}
 
-if($method==1){
-    require_once "resources/LearnWords.php";
-    $learn = new LearnWords();
-    $learn -> method_1();
-}
 
-if($method==2){
-    echo "2";
-}
-
-if($method==3){
-    echo "3";
-}
-
-if($method==4){
-    echo "4";
-}
-
-if($method==5){
-    echo "5";
-}
-
-if($method==6){
-    echo "6";
-}
-
-if($method==7){
-    echo "7";
-}
 
 if(($method!="EnterWord")&&($method!="SelectList")){
+
+    require_once "resources/LearnWords.php";
+    $learn = new LearnWords();
+    if($method==1){
+        $learn -> method_1();
+    }
+
+    if($method==2){
+        $learn -> method_2();
+    }
+
+    if($method==3){
+        $learn -> method_3();
+    }
+
+    if($method==4){
+        $learn -> method_4();
+    }
+
+    if($method==5){
+        $learn -> method_5();
+    }
+
+    if($method==6){
+        $learn -> method_6();
+    }
+
+    if($method==7){
+        $learn -> method_7();
+    }
+
+    if($method==8){
+        $learn -> method_8();
+    }
+
+
     // Load learning page
     $themeLearnWords = $lister->getThemePath(true) . '/home/learn_words.php';//learning page
     if (file_exists($themeLearnWords)) {

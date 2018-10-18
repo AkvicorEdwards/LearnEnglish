@@ -90,10 +90,10 @@ class LearnWords
      * METHOD
      */
 
-    public function method_1(){
+    public function method_1(){  //finished
         $list = $_COOKIE["sel_list"];
         $link = $this -> create_connection();
-        $sql = "SELECT * FROM english WHERE list=".$list." ORDER BY RAND() LIMIT 1";
+        $sql = "SELECT * FROM english WHERE list='$list' ORDER BY RAND() LIMIT 1";
         $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
         $row = mysqli_fetch_assoc($result);
         //Set cookie ,to show information in page
@@ -109,17 +109,200 @@ class LearnWords
         SETCOOKIE("rate",$row["rate"],time()+60*60*24);
 
     }
-    public function method_2(){
+    public function method_2(){ //finished
+        $list = $_COOKIE["sel_list"];
+        $link = $this -> create_connection();
+
+        //Set begin id and end id
+        if(EMPTY($_COOKIE['beginId2'])||($_COOKIE['beginId2']>$_COOKIE['endId2'])){
+            $sql = "SELECT * FROM english WHERE list='$list' ORDER BY 'id' ASC LIMIT 1";
+            $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+            $row = mysqli_fetch_assoc($result);
+            SETCOOKIE("beginId2",$row["id"]-1,time()+60*60*24);
+        }
+        if(EMPTY($_COOKIE['endId2'])||($_COOKIE['beginId2']>$_COOKIE['endId2'])){
+            $sql = "SELECT * FROM english WHERE list='$list' ORDER BY 'id' DESC LIMIT 1";
+            $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+            $row = mysqli_fetch_assoc($result);
+            SETCOOKIE("endId2",$row["id"],time()+60*60*24);
+        }
+        $beginId2 = $_COOKIE['beginId2']+1;
+
+
+        $sql = "SELECT * FROM english WHERE id='$beginId2'";
+        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+        $row = mysqli_fetch_assoc($result);
+        //Set cookie ,to show information in page
+        if(mysqli_num_rows($result) == 0){
+            die("List does not exist!");
+        }
+        SETCOOKIE("beginId2",$row["id"],time()+60*60*24);
+        SETCOOKIE("id",$row["id"],time()+60*60*24);
+        SETCOOKIE("words",$row["word"],time()+60*60*24);
+        SETCOOKIE("translate",$row["translate"],time()+60*60*24);
+        SETCOOKIE("r_cont",$row["r_cont"],time()+60*60*24);
+        SETCOOKIE("f_cont",$row["f_cont"],time()+60*60*24);
+        SETCOOKIE("cont",$row["cont"],time()+60*60*24);
+        SETCOOKIE("rate",$row["rate"],time()+60*60*24);
     }
-    public function method_3(){
+    public function method_3(){ //finished
+        $list = $_COOKIE["sel_list"];
+        $link = $this -> create_connection();
+        $sql = "SELECT * FROM english ORDER BY RAND() LIMIT 1";
+        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+        $row = mysqli_fetch_assoc($result);
+        //Set cookie ,to show information in page
+        if(mysqli_num_rows($result) == 0){
+            die("List does not exist!");
+        }
+        SETCOOKIE("id",$row["id"],time()+60*60*24);
+        SETCOOKIE("words",$row["word"],time()+60*60*24);
+        SETCOOKIE("translate",$row["translate"],time()+60*60*24);
+        SETCOOKIE("r_cont",$row["r_cont"],time()+60*60*24);
+        SETCOOKIE("f_cont",$row["f_cont"],time()+60*60*24);
+        SETCOOKIE("cont",$row["cont"],time()+60*60*24);
+        SETCOOKIE("rate",$row["rate"],time()+60*60*24);
     }
-    public function method_4(){
+    public function method_4(){ //finished
+        $list = $_COOKIE["sel_list"];
+        $link = $this -> create_connection();
+        //Set begin id and end id
+        if(EMPTY($_COOKIE['beginId4'])||($_COOKIE['beginId4']>$_COOKIE['endId4'])){
+            $sql = "SELECT * FROM english ORDER BY 'id' ASC LIMIT 1";
+            $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+            $row = mysqli_fetch_assoc($result);
+            SETCOOKIE("beginId4",$row["id"]-1,time()+60*60*24);
+        }
+        if(EMPTY($_COOKIE['endId4'])||($_COOKIE['beginId4']>$_COOKIE['endId4'])){
+            $sql = "SELECT * FROM english ORDER BY 'id' DESC LIMIT 1";
+            $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+            $row = mysqli_fetch_assoc($result);
+            SETCOOKIE("endId4",$row["id"],time()+60*60*24);
+        }
+        $beginId4 = $_COOKIE['beginId4']+1;
+
+
+        $sql = "SELECT * FROM english WHERE id='$beginId4'";
+        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+        $row = mysqli_fetch_assoc($result);
+        //Set cookie ,to show information in page
+        if(mysqli_num_rows($result) == 0){
+            die("List does not exist!");
+        }
+        SETCOOKIE("beginId4",$row["id"],time()+60*60*24);
+        SETCOOKIE("id",$row["id"],time()+60*60*24);
+        SETCOOKIE("words",$row["word"],time()+60*60*24);
+        SETCOOKIE("translate",$row["translate"],time()+60*60*24);
+        SETCOOKIE("r_cont",$row["r_cont"],time()+60*60*24);
+        SETCOOKIE("f_cont",$row["f_cont"],time()+60*60*24);
+        SETCOOKIE("cont",$row["cont"],time()+60*60*24);
+        SETCOOKIE("rate",$row["rate"],time()+60*60*24);
     }
-    public function method_5(){
+    public function method_5(){ //finished
+        $list = $_COOKIE["sel_list"];
+        $link = $this -> create_connection();
+        $sql = "SELECT * FROM english WHERE ((rate<0.5)&&(list='$list')) ORDER BY RAND() LIMIT 1";
+        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+        $row = mysqli_fetch_assoc($result);
+        //Set cookie ,to show information in page
+        if(mysqli_num_rows($result) == 0){
+            die("List does not exist! OR No hard words!");
+        }
+        SETCOOKIE("id",$row["id"],time()+60*60*24);
+        SETCOOKIE("words",$row["word"],time()+60*60*24);
+        SETCOOKIE("translate",$row["translate"],time()+60*60*24);
+        SETCOOKIE("r_cont",$row["r_cont"],time()+60*60*24);
+        SETCOOKIE("f_cont",$row["f_cont"],time()+60*60*24);
+        SETCOOKIE("cont",$row["cont"],time()+60*60*24);
+        SETCOOKIE("rate",$row["rate"],time()+60*60*24);
     }
     public function method_6(){
+        $list = $_COOKIE["sel_list"];
+        $link = $this -> create_connection();
+        //Set begin id and end id
+        if(EMPTY($_COOKIE['beginId6'])||($_COOKIE['beginId6']>$_COOKIE['endId6'])){
+            $sql = "SELECT * FROM english WHERE ((rate<0.5)&&(list='$list')) ORDER BY 'id' ASC LIMIT 1";
+            $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+            $row = mysqli_fetch_assoc($result);
+            SETCOOKIE("beginId6",$row["id"]-1,time()+60*60*24);
+        }
+        if(EMPTY($_COOKIE['endId6'])||($_COOKIE['beginId6']>$_COOKIE['endId6'])){
+            $sql = "SELECT * FROM english WHERE ((rate<0.5)&&(list='$list')) ORDER BY 'id' DESC LIMIT 1";
+            $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+            $row = mysqli_fetch_assoc($result);
+            SETCOOKIE("endId6",$row["id"],time()+60*60*24);
+        }
+
+
+        $nowId = $_COOKIE['beginId6'];
+        $sql = "SELECT * FROM english WHERE ((rate<0.5)&&(list='$list')&&(id>'$nowId')) ORDER BY 'id' ASC LIMIT 1";
+        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+        $row = mysqli_fetch_assoc($result);
+        //Set cookie ,to show information in page
+        if(mysqli_num_rows($result) == 0){
+            die("List does not exist! OR No hard words!");
+        }
+        SETCOOKIE("beginId6",$row["id"],time()+60*60*24);
+        SETCOOKIE("id",$row["id"],time()+60*60*24);
+        SETCOOKIE("words",$row["word"],time()+60*60*24);
+        SETCOOKIE("translate",$row["translate"],time()+60*60*24);
+        SETCOOKIE("r_cont",$row["r_cont"],time()+60*60*24);
+        SETCOOKIE("f_cont",$row["f_cont"],time()+60*60*24);
+        SETCOOKIE("cont",$row["cont"],time()+60*60*24);
+        SETCOOKIE("rate",$row["rate"],time()+60*60*24);
     }
-    public function method_7(){
+    public function method_7(){ //finished
+        $list = $_COOKIE["sel_list"];
+        $link = $this -> create_connection();
+        $sql = "SELECT * FROM english WHERE rate<0.5 ORDER BY RAND() LIMIT 1";
+        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+        $row = mysqli_fetch_assoc($result);
+        //Set cookie ,to show information in page
+        if(mysqli_num_rows($result) == 0){
+            die("List does not exist! OR No hard words!");
+        }
+        SETCOOKIE("id",$row["id"],time()+60*60*24);
+        SETCOOKIE("words",$row["word"],time()+60*60*24);
+        SETCOOKIE("translate",$row["translate"],time()+60*60*24);
+        SETCOOKIE("r_cont",$row["r_cont"],time()+60*60*24);
+        SETCOOKIE("f_cont",$row["f_cont"],time()+60*60*24);
+        SETCOOKIE("cont",$row["cont"],time()+60*60*24);
+        SETCOOKIE("rate",$row["rate"],time()+60*60*24);
+    }
+    public function method_8(){
+        $list = $_COOKIE["sel_list"];
+        $link = $this -> create_connection();
+        //Set begin id and end id
+        if(EMPTY($_COOKIE['beginId8'])||($_COOKIE['beginId8']>$_COOKIE['endId8'])){
+            $sql = "SELECT * FROM english WHERE rate<0.5 ORDER BY 'id' ASC LIMIT 1";
+            $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+            $row = mysqli_fetch_assoc($result);
+            SETCOOKIE("beginId8",$row["id"]-1,time()+60*60*24);
+        }
+        if(EMPTY($_COOKIE['endId8'])||($_COOKIE['beginId8']>$_COOKIE['endId8'])){
+            $sql = "SELECT * FROM english WHERE rate<0.5 ORDER BY 'id' DESC LIMIT 1";
+            $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+            $row = mysqli_fetch_assoc($result);
+            SETCOOKIE("endId8",$row["id"],time()+60*60*24);
+        }
+
+
+        $nowId = $_COOKIE['beginId8'];
+        $sql = "SELECT * FROM english WHERE ((rate<0.5)&&(id>'$nowId')) ORDER BY 'id' ASC LIMIT 1";
+        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+        $row = mysqli_fetch_assoc($result);
+        //Set cookie ,to show information in page
+        if(mysqli_num_rows($result) == 0){
+            die("List does not exist! OR No hard words!");
+        }
+        SETCOOKIE("beginId8",$row["id"],time()+60*60*24);
+        SETCOOKIE("id",$row["id"],time()+60*60*24);
+        SETCOOKIE("words",$row["word"],time()+60*60*24);
+        SETCOOKIE("translate",$row["translate"],time()+60*60*24);
+        SETCOOKIE("r_cont",$row["r_cont"],time()+60*60*24);
+        SETCOOKIE("f_cont",$row["f_cont"],time()+60*60*24);
+        SETCOOKIE("cont",$row["cont"],time()+60*60*24);
+        SETCOOKIE("rate",$row["rate"],time()+60*60*24);
     }
 
     public function setIsTrue(){
