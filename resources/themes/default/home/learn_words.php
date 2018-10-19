@@ -56,20 +56,20 @@
     function setWord()
     {
         var obj = document.getElementById("Word");
-        obj.innerHTML= "<?php echo $_COOKIE["words"] ?>";
+        obj.innerHTML= "<?php echo $_SESSION["words"] ?>";
     }
     function setTranslate()
     {
         var obj = document.getElementById("Translate");
-        obj.innerHTML= "<?php echo $_COOKIE["translate"] ?>";
+        obj.innerHTML= "<?php echo $_SESSION["translate"] ?>";
     }
     function setRate()
     {
-        document.getElementById("rate").value="<?php echo $_COOKIE["rate"];?>"
+        document.getElementById("rate").value="<?php echo $_SESSION["rate"];?>"
     }
     function checkWord(){
         var userWord = document.getElementById("word").value;
-        var rightWord = "<?php echo $_COOKIE["words"]; ?>";
+        var rightWord = "<?php echo $_SESSION["words"]; ?>";
 
         if (userWord == rightWord){
             alert("输入正确");
@@ -97,7 +97,7 @@
 
 </script>
 <script type="text/javascript">
-    ls="<?php echo $_COOKIE["words"] ?>";
+    ls="<?php session_start(); echo $_SESSION["words"] ?>";
     if(ls==""){
         window.location.reload();
     }

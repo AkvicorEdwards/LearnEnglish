@@ -45,37 +45,37 @@ if($method=="SelectList"){
 
 if(($method!="EnterWord")&&($method!="SelectList")){
 
-    require_once "resources/LearnWords.php";
+    require "resources/LearnWords.php";
     $learn = new LearnWords();
-    if($method==1){
+    if($method=='1'){
         $learn -> method_1();
     }
 
-    if($method==2){
+    if($method=='2'){
         $learn -> method_2();
     }
 
-    if($method==3){
+    if($method=='3'){
         $learn -> method_3();
     }
 
-    if($method==4){
+    if($method=='4'){
         $learn -> method_4();
     }
 
-    if($method==5){
+    if($method=='5'){
         $learn -> method_5();
     }
 
-    if($method==6){
+    if($method=='6'){
         $learn -> method_6();
     }
 
-    if($method==7){
+    if($method=='7'){
         $learn -> method_7();
     }
 
-    if($method==8){
+    if($method=='8'){
         $learn -> method_8();
     }
 
