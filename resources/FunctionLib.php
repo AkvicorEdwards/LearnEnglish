@@ -18,15 +18,17 @@
  * public create_connection()   return
  * public execute_sql($link, $database, $sql)   return
  * public checkLogin()
- * public function makeArray($str)  return
- * public function checkPermit($permit,$allow)  return
+ * public makeArray($str)  return
+ * public checkPermit($permit,$allow)  return
+ * public checkPassword($user,$password)    return
+ * public registerUser($regCode,$user,$password,$permissions)   return
  *
  */
 
 class FunctionLib
 {
     // Define the application version
-    const VERSION = '6.1';
+    const VERSION = '6.2';
 
     // Reserve some variables
     protected $_appDir = null;
@@ -316,7 +318,8 @@ class FunctionLib
         }
     }
 
-    public function checkPassword($user,$password){
+    public function checkPassword($user,$password)
+    {
         $link = $this -> create_connection();
         $sql = "SELECT * FROM users WHERE username = '$user'";
         $result = $this -> execute_sql($link, $this->_config['mysql_user_database'], $sql);
@@ -344,7 +347,8 @@ class FunctionLib
         }
     }
 
-    public function registerUser($regCode,$user,$password,$permissions){
+    public function registerUser($regCode,$user,$password,$permissions)
+    {
         if($regCode!=$this->_config['registration_code'])//Check registration code
             return 3;
         //Check if the user exist

@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99b9db80-c329-429a-b1f0-cca30a2cfbbb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/EnterWords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/EnterWords.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/FunctionLib.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/FunctionLib.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/LearnWords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/LearnWords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/learn_words.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/learn_words.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/learning.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/learning.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,14 +33,14 @@
         <counts>
           <entry key="MD" value="4" />
           <entry key="htaccess" value="3" />
-          <entry key="php" value="60" />
+          <entry key="php" value="61" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="4" />
-          <entry key="PHP" value="60" />
+          <entry key="PHP" value="61" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="htaccess" value="3" />
         </counts>
@@ -50,13 +49,13 @@
         <counts>
           <entry key="MD" value="332" />
           <entry key="htaccess" value="5" />
-          <entry key="php" value="7567" />
+          <entry key="php" value="7862" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="332" />
-          <entry key="PHP" value="7567" />
+          <entry key="PHP" value="7862" />
           <entry key="htaccess" value="5" />
         </counts>
       </usages-collector>
@@ -99,8 +98,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/LearnWords.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="342" lean-forward="true" selection-start-line="342" selection-end-line="342" />
+            <state relative-caret-position="323">
+              <caret line="369" column="5" lean-forward="true" selection-start-line="369" selection-start-column="5" selection-end-line="369" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/FunctionLib.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="440">
+              <caret line="303" lean-forward="true" selection-start-line="303" selection-end-line="303" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/EnterWords.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="565">
+              <caret line="113" column="5" lean-forward="true" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -123,20 +140,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/FunctionLib.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="329" column="36" selection-start-line="329" selection-start-column="30" selection-end-line="329" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>words</find>
+      <find>checkPermit</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -153,7 +162,6 @@
         <option value="$PROJECT_DIR$/resources/config.php" />
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/11.php" />
-        <option value="$PROJECT_DIR$/resources/EnterWords.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/resources/themes/default/home/upRate.php" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -164,8 +172,9 @@
         <option value="$PROJECT_DIR$/resources/themes/default/home/select_list.php" />
         <option value="$PROJECT_DIR$/resources/themes/default/home/index.php" />
         <option value="$PROJECT_DIR$/resources/themes/default/home/learning.php" />
-        <option value="$PROJECT_DIR$/resources/FunctionLib.php" />
         <option value="$PROJECT_DIR$/resources/themes/default/home/learn_words.php" />
+        <option value="$PROJECT_DIR$/resources/FunctionLib.php" />
+        <option value="$PROJECT_DIR$/resources/EnterWords.php" />
         <option value="$PROJECT_DIR$/resources/LearnWords.php" />
       </list>
     </option>
@@ -181,8 +190,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP7.1.7" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="408" />
-    <option name="y" value="131" />
+    <option name="x" value="1138" />
+    <option name="y" value="75" />
     <option name="width" value="1533" />
     <option name="height" value="926" />
   </component>
@@ -294,16 +303,15 @@
       <workItem from="1539849778068" duration="47000" />
       <workItem from="1539850040279" duration="4934000" />
       <workItem from="1539861592109" duration="8489000" />
-      <workItem from="1539921169442" duration="18126000" />
+      <workItem from="1539921169442" duration="25117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104972000" />
+    <option name="totallyTimeSpent" value="111963000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="408" y="131" width="1533" height="926" extended-state="0" />
-    <editor active="true" />
+    <frame x="1138" y="75" width="1533" height="926" extended-state="0" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984472" visible="true" weight="0.19144602" />
       <window_info id="Structure" order="1" sideWeight="0.5015528" side_tool="true" weight="0.18710022" />
@@ -344,13 +352,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/EnterWords.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -424,24 +425,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/FunctionLib.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="329" column="36" selection-start-line="329" selection-start-column="30" selection-end-line="329" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/themes/default/home/learning.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="55" column="5" lean-forward="true" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/themes/default/home/learn_words.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="28" column="57" lean-forward="true" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -452,10 +439,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/themes/default/home/learn_words.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="28" column="57" lean-forward="true" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/FunctionLib.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="303" lean-forward="true" selection-start-line="303" selection-end-line="303" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/EnterWords.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="565">
+          <caret line="113" column="5" lean-forward="true" selection-start-line="113" selection-start-column="5" selection-end-line="113" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/LearnWords.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="342" lean-forward="true" selection-start-line="342" selection-end-line="342" />
+        <state relative-caret-position="323">
+          <caret line="369" column="5" lean-forward="true" selection-start-line="369" selection-start-column="5" selection-end-line="369" selection-end-column="5" />
         </state>
       </provider>
     </entry>

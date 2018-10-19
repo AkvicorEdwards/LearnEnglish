@@ -18,7 +18,8 @@ class EnterWords
     /**
      * Login construct function. Run on object creation.
      */
-    public function __construct(){
+    public function __construct()
+    {
         // Set the class directory constant
         if(!defined('__DIR__')) {
             define('__DIR__', dirname(__FILE__));
@@ -37,7 +38,15 @@ class EnterWords
         }
     }
 
-    public function enterWords($list,$content){
+    /**
+     * Write data to the database
+     *
+     * @param $list
+     * @param $content
+     * @return bool
+     */
+    public function enterWords($list,$content)
+    {
         $tag = $this->makeArray($content);
         $tagCount = count($tag);//Array
         $link = $this->create_connection();
@@ -62,7 +71,7 @@ class EnterWords
      */
    protected function makeArray($str)
     {
-        $arr = explode(" ", $str);  //Cut
+        $arr = explode("&", $str);  //Cut
         $arr = array_filter($arr);  // Delete void
         foreach($arr as $value)  //Format
         {
@@ -71,6 +80,11 @@ class EnterWords
         return $newArr;
     }
 
+    /**
+     * Create Mysql connection
+     *
+     * @return mysqli
+     */
     protected function create_connection()
     {
         $link = mysqli_connect($this->_config['mysql_host'], $this->_config['mysql_user'], $this->_config['mysql_password'])
