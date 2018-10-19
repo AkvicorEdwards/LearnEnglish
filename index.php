@@ -76,6 +76,21 @@ $config = $lister -> getConfig();//Load config
  * SelectList
  */
 if(!empty($_POST["selectList"])){
+    unset($_SESSION['id']);
+    unset($_SESSION['words']);
+    unset($_SESSION['translate']);
+    unset($_SESSION['r_cont']);
+    unset($_SESSION['f_cont']);
+    unset($_SESSION['cont']);
+    unset($_SESSION['rate']);
+    unset($_SESSION['BeginID2']);
+    unset($_SESSION['EndID2']);
+    unset($_SESSION['BeginID4']);
+    unset($_SESSION['EndID4']);
+    unset($_SESSION['BeginID6']);
+    unset($_SESSION['EndID6']);
+    unset($_SESSION['BeginID8']);
+    unset($_SESSION['EndID8']);
     $list = $_POST["selectList"];
     SETCOOKIE("sel_list",$list,time()+60*60*24);
     header('location: '.$lister->getWebURL());

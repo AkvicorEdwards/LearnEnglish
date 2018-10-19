@@ -53,8 +53,20 @@ class EnterWords
         for($i=0;$i<$tagCount;$i=$i+2){
             $word = $tag[$i];
             $translate = $tag[$i+1];
-            $sql = "insert into english( list, word, translate) values ('$list', '$word','$translate')";
+            $sql = "insert into english ( list, word, translate) values ('$list', '$word','$translate')";
             $result = $this->execute_sql($link, $this->_config['mysql_project_database'], $sql);
+
+            $sql = "SELECT * FROM list_index WHERE list_name = '$list'";
+            $result2 = $this->execute_sql($link, $this->_config['mysql_project_database'], $sql);
+            if($row = mysqli_fetch_assoc($result2)){
+                $list_name = $row['list_name'];
+                $total = $row['total']+1;
+                $sql = "UPDATE list_index SET total='$total' WHERE list_name='$list_name'";
+                $result2 = $this->execute_sql($link, $this->_config['mysql_project_database'], $sql);
+            }else{
+                $sql = "insert into list_index (list_name,total) values ('$list','1')";
+                $result2 = $this->execute_sql($link, $this->_config['mysql_project_database'], $sql);
+            }
         }
         if(!$result){
             return false;//Enter failure
@@ -112,4 +124,5 @@ class EnterWords
 
         return $result;
     }
+
 }

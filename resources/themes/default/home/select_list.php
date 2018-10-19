@@ -24,6 +24,23 @@
     <div class="wrapper">
         <div class="container">
             <h1>Select List</h1>
+            <form class="form" action="" method="post">
+                <input  type="text" placeholder="Existed List" disabled>
+
+                <?php
+                require "resources/LearnWords.php";
+                $learn = new LearnWords();
+                $result = $learn->get_list();
+                $total_records = mysqli_num_rows($result);
+                $j = 1;
+                while ($row = mysqli_fetch_assoc($result) and $j <= $total_records)
+                {
+                    echo "<button>".$row['list_name']."(".$row['total'].")</button>";
+                    echo "<div></div>";echo "</br>";
+                    $j++;
+                }
+                ?>
+            </form>
 
             <form class="form" action="" method="post">
                 <input name="selectList" type="text" placeholder="List" required>

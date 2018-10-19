@@ -399,4 +399,12 @@ class LearnWords
         $result = $this -> execute_sql($link, $this->_config['mysql_user_database'], $sql);
     }
 
+
+    public function get_list(){
+        $link = $this -> create_connection();
+        $sql = "SELECT * FROM list_index";
+        $result = $this -> execute_sql($link, $this->_config['mysql_user_database'], $sql);
+        return $result;
+    }
+
 }
