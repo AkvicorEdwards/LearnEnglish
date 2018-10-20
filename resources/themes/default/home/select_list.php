@@ -21,12 +21,19 @@
 </head>
 <body>
 <div class="htmleaf-container">
-    <div class="wrapper">
+    <div class="wrapper" style='OVERFLOW: auto; '>
         <div class="container">
             <h1>Select List</h1>
+            <form class="form">
+                <button  type="button" onclick="location.href='?'">Back Home</button>
+            </form>
+            <form class="form" action="" method="post">
+                <input name="selectList" type="text" placeholder="List" required>
+                <button type="submit" id="login-button" name="submit">Enter</button>
+            </form>
             <form class="form" action="" method="post">
                 <input  type="text" placeholder="Existed List" disabled>
-
+                <input  type="text" placeholder="Name(NumberOfWords)" value="Name(NumberOfWords)" readonly>
                 <?php
                 require "resources/LearnWords.php";
                 $learn = new LearnWords();
@@ -35,17 +42,14 @@
                 $j = 1;
                 while ($row = mysqli_fetch_assoc($result) and $j <= $total_records)
                 {
-                    echo "<button>".$row['list_name']."(".$row['total'].")</button>";
+                    echo "<button type='button' onclick=\"location.href='?mod=learning&method=List&list=".$row['list_name']."'\" >".$row['list_name']."(".$row['total'].")</button>";
                     echo "<div></div>";echo "</br>";
                     $j++;
                 }
                 ?>
             </form>
 
-            <form class="form" action="" method="post">
-                <input name="selectList" type="text" placeholder="List" required>
-                <button type="submit" id="login-button" name="submit">Enter</button>
-            </form>
+
         </div>
 
         <ul class="bg-bubbles">

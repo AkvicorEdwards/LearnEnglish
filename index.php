@@ -6,11 +6,8 @@
  * Time: 19:19
  */
 
-
 require_once "resources/FunctionLib.php";
-
 $lister = new FunctionLib();
-
 
 /**
  * Get login information

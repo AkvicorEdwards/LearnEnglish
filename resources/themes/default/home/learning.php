@@ -28,6 +28,16 @@ if($method=="SelectList"){
     }
 }
 
+if($method=="List"){
+    // Load learn page
+    $themeListList = $lister->getThemePath(true) . '/home/list.php';//learning page
+    if (file_exists($themeListList)) {
+        include($themeListList);
+    } else {
+        die('ERROR: Failed to load list page');
+    }
+}
+
 //
 //if($checkWord=="true"){
 //    require_once "resources/LearnWords.php";
@@ -43,41 +53,52 @@ if($method=="SelectList"){
 
 
 
-if(($method!="EnterWord")&&($method!="SelectList")){
+if(($method!="EnterWord")&&($method!="SelectList")&&($method!="List")){
 
     require "resources/LearnWords.php";
     $learn = new LearnWords();
-    if($method=='1'){
-        $learn -> method_1();
+    switch ($method){
+        case 1:$learn -> method_1();break;
+        case 2:$learn -> method_2();break;
+        case 3:$learn -> method_3();break;
+        case 4:$learn -> method_4();break;
+        case 5:$learn -> method_5();break;
+        case 6:$learn -> method_6();break;
+        case 7:$learn -> method_7();break;
+        case 8:$learn -> method_8();break;
     }
 
-    if($method=='2'){
-        $learn -> method_2();
-    }
-
-    if($method=='3'){
-        $learn -> method_3();
-    }
-
-    if($method=='4'){
-        $learn -> method_4();
-    }
-
-    if($method=='5'){
-        $learn -> method_5();
-    }
-
-    if($method=='6'){
-        $learn -> method_6();
-    }
-
-    if($method=='7'){
-        $learn -> method_7();
-    }
-
-    if($method=='8'){
-        $learn -> method_8();
-    }
+//    if($method=='1'){
+//        $learn -> method_1();
+//    }
+//
+//    if($method=='2'){
+//        $learn -> method_2();
+//    }
+//
+//    if($method=='3'){
+//        $learn -> method_3();
+//    }
+//
+//    if($method=='4'){
+//        $learn -> method_4();
+//    }
+//
+//    if($method=='5'){
+//        $learn -> method_5();
+//    }
+//
+//    if($method=='6'){
+//        $learn -> method_6();
+//    }
+//
+//    if($method=='7'){
+//        $learn -> method_7();
+//    }
+//
+//    if($method=='8'){
+//        $learn -> method_8();
+//    }
 
 
     // Load learning page

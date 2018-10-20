@@ -369,6 +369,17 @@ class LearnWords
         $_SESSION['rate'] = $row->rate;
     }
 
+    public function list_list($list){
+        $link = $this -> create_connection();  //Create Mysql connection
+        $sql = "SELECT * FROM english WHERE list='$list'";
+        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);  //Run SQL query
+        //Set cookie ,to show information in page
+        if(mysqli_num_rows($result) == 0){  //if result does not exist
+            die("List does not exist!");
+        }
+        return $result;
+    }
+
     /**
      * Update the database when user enters the correct word
      */
