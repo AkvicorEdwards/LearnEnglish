@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 19, 2018 at 10:46 PM
+-- Generation Time: Oct 20, 2018 at 04:54 PM
 -- Server version: 5.5.60-log
 -- PHP Version: 7.1.18
 
@@ -77,7 +77,7 @@ INSERT INTO `english` (`id`, `list`, `word`, `translate`, `r_cont`, `f_cont`, `c
 (29, '1', ' orchid ', '兰花', 0, 0, 0, 0),
 (30, '1', ' freesia ', '小苍兰', 0, 0, 0, 0),
 (31, '1', ' cyclamen', ' 仙客来', 0, 0, 0, 0),
-(32, '1', ' begonia ', '秋海棠', 0, 0, 0, 0),
+(32, '1', ' begonia ', '秋海棠', 1, 1, 1, 0),
 (33, '1', ' anemone ', '银莲花', 0, 0, 0, 0),
 (34, '1', ' wisteria', ' 柴藤', 0, 0, 0, 0),
 (35, '1', ' redbud', ' 紫荆', 0, 0, 0, 0),
@@ -91,7 +91,7 @@ INSERT INTO `english` (`id`, `list`, `word`, `translate`, `r_cont`, `f_cont`, `c
 (43, '1', ' rhododendron ', '杜鹃花', 0, 0, 0, 0),
 (44, '1', ' daphne ', '瑞香', 0, 0, 0, 0),
 (45, '1', ' gardenia ', '栀子', 0, 0, 0, 0),
-(46, '1', ' lilac ', '紫丁香', 0, 0, 0, 0),
+(46, '1', ' lilac ', '紫丁香', 1, 0, 1, 1),
 (47, '1', ' night-blooming cereus ', '仙人掌', 0, 0, 0, 0),
 (48, '1', ' apple ', '苹果', 0, 0, 0, 0),
 (49, '1', ' pear ', '梨', 0, 0, 0, 0),
@@ -127,10 +127,18 @@ INSERT INTO `english` (`id`, `list`, `word`, `translate`, `r_cont`, `f_cont`, `c
 (79, '1', ' hemlock spruce', ' 铁杉', 0, 0, 0, 0),
 (80, '1', ' spruce ', '云杉', 0, 0, 0, 0),
 (81, '1', ' yew ', '紫杉', 0, 0, 0, 0),
-(82, '2', 'is1', '这是1', 0, 0, 0, 0),
-(83, '2', 'is2', '这是2', 0, 0, 0, 0),
+(82, '2', 'is1', '这是1', 1, 0, 1, 1),
+(83, '2', 'is2', '这是2', 1, 0, 1, 1),
 (84, '2', 'this is3', '这是3', 0, 0, 0, 0),
-(85, '2', 'this is 4', '这是 4', 0, 0, 0, 0);
+(85, '2', 'this is 4', '这是 4', 0, 0, 0, 0),
+(86, 'one', 'one', '', 0, 0, 0, 0),
+(87, 'one', 'one', '', 0, 0, 0, 0),
+(88, 'one', 'one', '', 0, 0, 0, 0),
+(89, 'two', 'two', '', 0, 0, 0, 0),
+(90, 'two', 'two', '', 0, 0, 0, 0),
+(91, 'one', 'one', '', 0, 0, 0, 0),
+(92, 'one', 'one', '', 0, 0, 0, 0),
+(93, 'bad', 'bad', '', 0, 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -150,7 +158,10 @@ CREATE TABLE `list_index` (
 
 INSERT INTO `list_index` (`id`, `list_name`, `total`) VALUES
 (1, '1', 81),
-(2, '2', 4);
+(2, '2', 4),
+(3, 'one', 5),
+(4, 'two', 2),
+(5, 'bad', 1);
 
 -- --------------------------------------------------------
 
@@ -202,13 +213,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `english`
 --
 ALTER TABLE `english`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT for table `list_index`
 --
 ALTER TABLE `list_index`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `users`
