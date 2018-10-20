@@ -5,6 +5,7 @@
  * Date: 2018/10/19
  * Time: 18:53
  */
+//Select language
 switch ($DisplayLanguage){
     case "zh-cmn-Hans":
         $lang = "zh-cmn-Hans";
@@ -52,6 +53,9 @@ $total_records = mysqli_num_rows($result);
                 <input  type="text" placeholder="<?php echo $is3 ?>" disabled>
                 <input  type="text" placeholder="<?php echo $is4 ?>" value="<?php echo $is4 ?>" readonly>
                 <?php
+                /**
+                 * Output existing words from List
+                 */
                 $j = 1;
                 while ($row = mysqli_fetch_assoc($result) and $j <= $total_records)
                 {
@@ -80,8 +84,8 @@ $total_records = mysqli_num_rows($result);
 
 
 <script src="resources/themes/default/home/js/jquery-2.1.1.min.js" type="text/javascript"></script>
-<!--
-<script type="text/javascript" src="resources/themes/default/login/js/funny-title.js"></script>
--->
+
+<?php if($FunnyTitle==true) echo "<script type=\"text/javascript\" src=\"resources/themes/default/home/js/funny-title.js\"></script>" ?>
+
 </body>
 </html>

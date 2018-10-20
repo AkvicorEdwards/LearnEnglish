@@ -73,8 +73,8 @@ switch ($DisplayLanguage){
 </div>
 
 <script src="resources/themes/default/home/js/jquery-2.1.1.min.js" type="text/javascript"></script>
-<!--
-<script type="text/javascript" src="resources/themes/default/login/js/funny-title.js"></script>
--->
+
+<?php if($FunnyTitle==true) echo "<script type=\"text/javascript\" src=\"resources/themes/default/home/js/funny-title.js\"></script>" ?>
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="<?php echo $lang ?>">
+<html lang="zh-cmn-Hans">
 <head>
     <meta name="theme-color" content="#1E90FF">
     <meta charset="UTF-8">
@@ -69,8 +69,8 @@
 
 
 <script src="resources/themes/default/login/js/jquery-2.1.1.min.js" type="text/javascript"></script>
-<!--
-<script type="text/javascript" src="resources/themes/default/login/js/funny-title.js"></script>
--->
+
+<?php if($FunnyTitle==true) echo "<script type=\"text/javascript\" src=\"resources/themes/default/home/js/funny-title.js\"></script>" ?>
+
 </body>
 </html>

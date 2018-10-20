@@ -9,8 +9,8 @@
 $method = $_GET['method'];
 
 if($method=="EnterWord"){
-    // Load learn page
-    $themeEnterWords = $lister->getThemePath(true) . '/home/enter_words.php';//learning page
+    // Load page
+    $themeEnterWords = $lister->getThemePath(true) . '/home/enter_words.php';//enter_words page
     if (file_exists($themeEnterWords)) {
         include($themeEnterWords);
     } else {
@@ -19,8 +19,8 @@ if($method=="EnterWord"){
 }
 
 if($method=="SelectList"){
-    // Load learn page
-    $themeSelectList = $lister->getThemePath(true) . '/home/select_list.php';//learning page
+    // Load page
+    $themeSelectList = $lister->getThemePath(true) . '/home/select_list.php';//select_list page
     if (file_exists($themeSelectList)) {
         include($themeSelectList);
     } else {
@@ -29,29 +29,14 @@ if($method=="SelectList"){
 }
 
 if($method=="List"){
-    // Load learn page
-    $themeListList = $lister->getThemePath(true) . '/home/list.php';//learning page
+    // Load page
+    $themeListList = $lister->getThemePath(true) . '/home/list.php';//list page
     if (file_exists($themeListList)) {
         include($themeListList);
     } else {
         die('ERROR: Failed to load list page');
     }
 }
-
-//
-//if($checkWord=="true"){
-//    require_once "resources/LearnWords.php";
-//    $learn = new LearnWords();
-//    $lister -> setIsTrue();
-//}
-//
-//if($checkWord=="false"){
-//    require_once "resources/LearnWords.php";
-//    $learn = new LearnWords();
-//    $lister -> setIsFalse();
-//}
-
-
 
 if(($method!="EnterWord")&&($method!="SelectList")&&($method!="List")){
 
@@ -67,39 +52,6 @@ if(($method!="EnterWord")&&($method!="SelectList")&&($method!="List")){
         case 7:$learn -> method_7();break;
         case 8:$learn -> method_8();break;
     }
-
-//    if($method=='1'){
-//        $learn -> method_1();
-//    }
-//
-//    if($method=='2'){
-//        $learn -> method_2();
-//    }
-//
-//    if($method=='3'){
-//        $learn -> method_3();
-//    }
-//
-//    if($method=='4'){
-//        $learn -> method_4();
-//    }
-//
-//    if($method=='5'){
-//        $learn -> method_5();
-//    }
-//
-//    if($method=='6'){
-//        $learn -> method_6();
-//    }
-//
-//    if($method=='7'){
-//        $learn -> method_7();
-//    }
-//
-//    if($method=='8'){
-//        $learn -> method_8();
-//    }
-
 
     // Load learning page
     $themeLearnWords = $lister->getThemePath(true) . '/home/learn_words.php';//learning page

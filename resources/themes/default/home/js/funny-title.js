@@ -1,9 +1,9 @@
 /**
- * Author:CC11001100
- * 
+ * @author AkvicorEdwards
+ *
  * Funny title
  * 
- *  用于网页失去焦点时改变成有趣的标题
+ *  Used to change the title into an funny title when the page loses focus
  * 
  */
 
@@ -28,30 +28,8 @@ $(function(){
 		}
 	}
 
-    /*
-   $('.post-title a,.post-more-link').hover(function() {
-        $(this).stop().animate({
-            'marginLeft': '10px'
-        }, 200);
-    }, function() {
-        $(this).stop().animate({
-            'marginLeft': '0px'
-        }, 400);
-    });
 
-    $.ajax({
-            url: 'https://sslapi.hitokoto.cn/',
-            type: 'GET',
-            dataType: 'json'
-        })
-        .done(function(data) {
-            html = '' + data.hitokoto + '  来自于 ' + data.from;
-            $('#hitokoto').text(html);
-        })
-*/
-	
-
-	/*------------------------ 下面的代码来自网络，用于解决浏览器兼容性问题 ----------------------------------*/
+	/*------------------------ The following code comes from the network to resolve browser compatibility issues ----------------------------------*/
 	
 	// Get Browser-Specifc Prefix
 	function getBrowserPrefix() {

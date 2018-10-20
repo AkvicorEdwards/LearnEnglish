@@ -74,6 +74,9 @@ class FunctionLib
         return $this->_config;
     }
 
+    /**
+     * @return null
+     */
     public function getWebURL()
     {
         return $this->_webURL;
@@ -299,7 +302,7 @@ class FunctionLib
         {
             $newArr[] = $value;
         }
-        return $newArr;
+        return $newArr; //return array
     }
 
     /**
@@ -311,7 +314,7 @@ class FunctionLib
      */
     public function checkPermit($permit,$allow)
     {
-        if(in_array($permit,$allow)){
+        if(in_array($permit,$allow)){//Check if permit is in allow
             return true;
         }else{
             return false;
@@ -331,14 +334,9 @@ class FunctionLib
             //Set session
             session_start();
             $_SESSION['id'] = $row->id;
-//            $_SESSION['name'] = $row->name;
             $_SESSION['userName'] = $row->username;
             $_SESSION['password'] = $row->password;
-//            $_SESSION['birthday'] = $row->birthday;
             $_SESSION['permissions'] = $row->permissions;
-//            $_SESSION['userNickName'] = $row->userNickName;
-//            $_SESSION['profilePicture'] = $row->profilePicture;
-//            $_SESSION['NumberChangePassword'] = $row->NumberChangePassword;
 
             return true;
 
@@ -350,7 +348,7 @@ class FunctionLib
     public function registerUser($regCode,$user,$password,$permissions)
     {
         if($regCode!=$this->_config['registration_code'])//Check registration code
-            return 3;
+            return 3;//wrong register code
         //Check if the user exist
         $link = $this -> create_connection();
         $sql = "SELECT * FROM users WHERE username = '$user'";

@@ -12,16 +12,16 @@ $lister = new FunctionLib();
 /**
  * Get login information
  */
-if( !empty($_POST["username"]) && empty($_POST["permissions"]) ){
+if( !empty($_POST["username"]) && empty($_POST["permissions"]) ){//If there is no permission Is Login
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $bol = $lister->checkPassword($username,$password);
-}else if( !empty($_POST["username"]) && !empty($_POST["permissions"]) ){
+    $bol = $lister->checkPassword($username,$password);//Check password and set session
+}else if( !empty($_POST["username"]) && !empty($_POST["permissions"]) ){//If there is permission Is register
     $registrationCode = $_POST["registrationCode"];
     $username = $_POST["username"];
     $password = $_POST["password"];
     $permissions = $_POST["permissions"];
-    $bol = $lister->registerUser($registrationCode,$username,$password,$permissions);
+    $bol = $lister->registerUser($registrationCode,$username,$password,$permissions);//Write user information into database
     if($bol==1){
         echo "<script type='text/javascript'>";
         echo "alert('Register success!');";
@@ -51,7 +51,7 @@ if( !empty($_POST["list"]) && !empty($_POST["content"]) ){
     $content = $_POST["content"];
     require_once "resources/EnterWords.php";
     $enter = new EnterWords();
-    $enterResult = $enter -> enterWords($list,$content);
+    $enterResult = $enter -> enterWords($list,$content);//Write words into database
     if($enterResult){
         echo "<script type='text/javascript'>";
         echo "alert('Enter success!');";
@@ -71,12 +71,13 @@ $config = $lister -> getConfig();//Load config
 
 $WebsiteTitle = $config['website_title'];//Get website title
 $DisplayLanguage = $config['theme_display_language'];//Get display language
-
+$FunnyTitle = $config['funny_title'];//Get funny_title setting
 
 /**
  * SelectList
  */
 if(!empty($_POST["selectList"])){
+    //Unset old session
     unset($_SESSION['id']);
     unset($_SESSION['words']);
     unset($_SESSION['translate']);
@@ -93,7 +94,7 @@ if(!empty($_POST["selectList"])){
     unset($_SESSION['BeginID8']);
     unset($_SESSION['EndID8']);
     $list = $_POST["selectList"];
-    SETCOOKIE("sel_list",$list,time()+60*60*24);
+    SETCOOKIE("sel_list",$list,time()+60*60*24);//Set cookie record selection
     header('location: '.$lister->getWebURL());
 }
 
@@ -133,5 +134,5 @@ if($_GET['mod']=="register") {
         die('ERROR: Failed to load home page');
     }
 }else{
-    die('ERROR: NUll');
+    die('ERROR: NUll');//Other Error
 }

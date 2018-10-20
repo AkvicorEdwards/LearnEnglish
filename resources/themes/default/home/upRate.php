@@ -7,7 +7,7 @@
  */
 
 $checkWord = $_POST["checkWord"];
-//$method = $_POST["method"];
+
 
 require "../../../LearnWords.php";
 $lister = new LearnWords();

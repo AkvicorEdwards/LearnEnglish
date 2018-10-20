@@ -6,6 +6,28 @@
  * Time: 19:41
  */
 
+/**
+ * Class LearnWords
+ *
+ * public __construct()
+ *
+ * protected makeArray($str)   return
+ * protected create_connection()   return
+ * protected execute_sql($link, $database, $sql)   return
+ * public method_1()
+ * public method_2()
+ * public method_3()
+ * public method_4()
+ * public method_5()
+ * public method_6()
+ * public method_7()
+ * public method_8()
+ * public list_list($list) return
+ *  public setIsTrue()
+ *  public setIsFalse()
+ * public get_list()    return
+ */
+
 class LearnWords
 {
     // Define the application version
@@ -54,7 +76,7 @@ class LearnWords
         {
             $newArr[] = $value;
         }
-        return $newArr;
+        return $newArr; //return array
     }
 
     protected function create_connection()
@@ -369,7 +391,8 @@ class LearnWords
         $_SESSION['rate'] = $row->rate;
     }
 
-    public function list_list($list){
+    public function list_list($list)
+    {
         $link = $this -> create_connection();  //Create Mysql connection
         $sql = "SELECT * FROM english WHERE list='$list'";
         $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);  //Run SQL query
@@ -385,6 +408,12 @@ class LearnWords
      */
     public function setIsTrue()
     {
+        /*
+         * When user choose Correct
+         * Add the correct number of times
+         * Total plus one
+         * Update correct rate
+         */
         session_start();
         $link = $this -> create_connection();
         $id = $_SESSION['id'];
@@ -400,6 +429,12 @@ class LearnWords
      */
     public function setIsFalse()
     {
+        /*
+         * When user choose Wrong
+         * Add the wrong number of times
+         * Total plus one
+         * Update correct rate
+         */
         session_start();
         $link = $this -> create_connection();
         $id = $_SESSION['id'];
@@ -411,7 +446,13 @@ class LearnWords
     }
 
 
-    public function get_list(){
+    /**
+     * Get all words from a list
+     *
+     * @return bool|mysqli_result
+     */
+    public function get_list()
+    {
         $link = $this -> create_connection();
         $sql = "SELECT * FROM list_index";
         $result = $this -> execute_sql($link, $this->_config['mysql_user_database'], $sql);

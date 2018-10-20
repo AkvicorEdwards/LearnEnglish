@@ -6,6 +6,7 @@
  * Time: 13:10
  */
 
+//Select language
 switch ($DisplayLanguage){
     case "zh-cmn-Hans":
         $lang = "zh-cmn-Hans";
@@ -60,6 +61,9 @@ switch ($DisplayLanguage){
                 $result = $learn->get_list();
                 $total_records = mysqli_num_rows($result);
                 $j = 1;
+                /**
+                 * Output existing List
+                 */
                 while ($row = mysqli_fetch_assoc($result) and $j <= $total_records)
                 {
                     echo "<button type='button' onclick=\"location.href='?mod=learning&method=List&list=".$row['list_name']."'\" >".$row['list_name']."(".$row['total'].")</button>";
@@ -89,8 +93,8 @@ switch ($DisplayLanguage){
 
 
 <script src="resources/themes/default/home/js/jquery-2.1.1.min.js" type="text/javascript"></script>
-<!--
-<script type="text/javascript" src="resources/themes/default/login/js/funny-title.js"></script>
--->
+
+<?php if($FunnyTitle==true) echo "<script type=\"text/javascript\" src=\"resources/themes/default/home/js/funny-title.js\"></script>" ?>
+
 </body>
 </html>
