@@ -69,6 +69,10 @@ if( !empty($_POST["list"]) && !empty($_POST["content"]) ){
 $checkLogin = $lister ->checkLogin();//Check result
 $config = $lister -> getConfig();//Load config
 
+$WebsiteTitle = $config['website_title'];//Get website title
+$DisplayLanguage = $config['theme_display_language'];//Get display language
+
+
 /**
  * SelectList
  */

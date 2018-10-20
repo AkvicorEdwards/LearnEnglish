@@ -17,5 +17,6 @@ return array(
     'mysql_project_database' => 'learn_english',//Project database
     'website_title'=>'Learn English',//Website Title
     'theme_name' => 'default',//Default theme
+    'theme_display_language' => 'zh-cmn-Hans',//Display language  zh-cmn-Hans OR en
 
 );

@@ -1,5 +1,42 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: AkvicorEdwards
+ * Date: 2018/10/15
+ * Time: 19:56
+ */
+
+    switch ($DisplayLanguage){
+        case "zh-cmn-Hans":
+            $lang = "zh-cmn-Hans";
+            $is1 = "单词";
+            $is2 = "翻译";
+            $is3 = "正确率";
+            $is4 = "拼写单词";
+            $is5 = "检查拼写";
+            $is6 = "正确";
+            $is7 = "错误";
+            $is8 = "回主页";
+            $is9 = "拼写正确";
+            $is10 = "拼写错误";
+            break;
+        case "en":
+            $lang = "en";
+            $is1 = "Word";
+            $is2 = "Translate";
+            $is3 = "Correct Rate";
+            $is4 = "Spell Word";
+            $is5 = "Check Spelling";
+            $is6 = "Correct";
+            $is7 = "Wrong";
+            $is8 = "Back Home";
+            $is9 = "Correctly Spelled";
+            $is10 = "Spelling Mistake";
+            break;
+    }
+?>
 <!doctype html>
-<html lang="zh-cmn-Hans">
+<html lang="<?php echo $lang ?>">
 <head>
     <meta name="theme-color" content="#1E90FF">
     <meta charset="UTF-8">
@@ -16,25 +53,24 @@
         <div class="container">
 
             <form class="form">
-                <button  type="button" id="Word" onclick="setWord()">Word</button>
+                <button  type="button" id="Word" onclick="setWord()"><?php echo $is1 ?></button>
                 <div></div><br />
-                <button  type="button" id="Translate" onclick="setTranslate()">Translate</button>
+                <button  type="button" id="Translate" onclick="setTranslate()"><?php echo $is2 ?></button>
                 <div></div><br />
-                <input id="rate" name="rate" type="text" placeholder="正确率" value="" onclick="setRate()" readonly>
-                <input id="word" name="word" type="text" placeholder="Word" value="">
-                <button  type="button" onclick="checkWord()">检查拼写</button>
+                <input id="rate" name="rate" type="text" placeholder="<?php echo $is3 ?>" value="" onclick="setRate()" readonly>
+                <input id="word" name="word" type="text" placeholder="<?php echo $is4 ?>" value="">
+                <button  type="button" onclick="checkWord()"><?php echo $is5 ?></button>
             </form>
             <form class="form" action="resources/themes/default/home/upRate.php" method="post">
                 <input name="checkWord" type="text" placeholder="Right" value="true" style="display: none">
-                <button type="submit" id="login-button" name="submit">正确</button>
+                <button type="submit" id="login-button" name="submit"><?php echo $is6 ?></button>
             </form>
             <form class="form" action="resources/themes/default/home/upRate.php" method="post">
                 <input  name="checkWord" type="text" placeholder="False" value="false" style="display: none">
-
-                <button type="submit" id="login-button" name="submit">错误</button>
+                <button type="submit" id="login-button" name="submit"><?php echo $is7 ?></button>
             </form>
             <form class="form">
-            <button  type="button" onclick="location.href='?'">回主页</button>
+            <button  type="button" onclick="location.href='?'"><?php echo $is8 ?></button>
             </form>
         </div>
 
@@ -72,28 +108,11 @@
         var rightWord = "<?php echo $_SESSION["words"]; ?>";
 
         if (userWord == rightWord){
-            alert("输入正确");
+            alert("<?php echo $is9 ?>");
         }else{
-            alert("输入错误");
+            alert("<?php echo $is10 ?>");
         }
     }
-    //function isRight(){
-    //    $.ajax({
-    //        type: "POST",
-    //        url: "index.php",
-    //        data: "checkWord=right&method=<?php //echo $method ?>//",
-    //        success: function(msg){
-    //            alert( "Data Saved: " + msg );
-    //        }
-    //    });
-    //}
-    //function isFalse(){
-    //    $.ajax({
-    //        type: "POST",
-    //        url: "resources/default/home/upRate.php",
-    //        data: "checkWord=false&method=<?php //echo $method ?>//",
-    //    });
-    //}
 
 </script>
 <script type="text/javascript">

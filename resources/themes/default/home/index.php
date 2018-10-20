@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="zh-cmn-Hans">
+<html lang="<?php echo $lang ?>">
 <head>
     <meta name="theme-color" content="#1E90FF">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Language</title>
+    <title><?php echo $WebsiteTitle; ?></title>
     <link rel="icon" href="resources/themes/default/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="resources/themes/default/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="resources/themes/default/home/css/styles.css">

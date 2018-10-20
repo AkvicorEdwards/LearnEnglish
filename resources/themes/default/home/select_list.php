@@ -6,15 +6,35 @@
  * Time: 13:10
  */
 
+switch ($DisplayLanguage){
+    case "zh-cmn-Hans":
+        $lang = "zh-cmn-Hans";
+        $is1 = "回主页";
+        $is2 = "词库";
+        $is4 = "选择";
+        $is5 = "已存在的词库";
+        $is6 = "词库名(词库内单词数量)";
+        $is7 = "选择词库";
+        break;
+    case "en":
+        $lang = "en";
+        $is1 = "Back Home";
+        $is2 = "List";
+        $is4 = "Select";
+        $is5 = "Existed List";
+        $is6 = "Name(NumberOfWords)";
+        $is7 = "Select List";
+        break;
+}
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="<?php echo $lang ?>">
 <head>
     <meta name="theme-color" content="#1E90FF">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Select List</title>
+    <title><?php echo $is7 ?></title>
     <link rel="icon" href="resources/themes/default/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="resources/themes/default/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="resources/themes/default/home/css/styles.css">
@@ -25,15 +45,15 @@
         <div class="container">
             <h1>Select List</h1>
             <form class="form">
-                <button  type="button" onclick="location.href='?'">Back Home</button>
+                <button  type="button" onclick="location.href='?'"><?php echo $is1 ?></button>
             </form>
             <form class="form" action="" method="post">
-                <input name="selectList" type="text" placeholder="List" required>
-                <button type="submit" id="login-button" name="submit">Enter</button>
+                <input name="selectList" type="text" placeholder="<?php echo $is2 ?>" required>
+                <button type="submit" id="login-button" name="submit"><?php echo $is4 ?></button>
             </form>
             <form class="form" action="" method="post">
-                <input  type="text" placeholder="Existed List" disabled>
-                <input  type="text" placeholder="Name(NumberOfWords)" value="Name(NumberOfWords)" readonly>
+                <input  type="text" placeholder="<?php echo $is5 ?>" disabled>
+                <input  type="text" placeholder="<?php echo $is6 ?>" value="<?php echo $is6 ?>" readonly>
                 <?php
                 require "resources/LearnWords.php";
                 $learn = new LearnWords();
