@@ -95,6 +95,7 @@ List就是词库,默认有两个List,可以自己创建
 │   │    │ ├ index.php	# 目录页面 #
 │   │    │ ├ learn_words.php	# 背单词页面 #
 │   │    │ ├ learning.php	# 判断加载文件 #
+│   │    │ ├ list.php	# 列出List内单词 #
 │   │    │ ├ select_list.php	# 选择List文件 #
 │   │    │ └ upRate.php		# 输入单词正误处理 #
 │   │    │ 
