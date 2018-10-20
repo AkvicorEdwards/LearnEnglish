@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99b9db80-c329-429a-b1f0-cca30a2cfbbb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/EnterWords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/EnterWords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/FunctionLib.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/FunctionLib.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/LearnWords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/LearnWords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/enter_words.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/enter_words.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/js/funny-title.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/js/funny-title.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/learn_words.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/learn_words.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/learning.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/learning.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/select_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/select_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/upRate.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/upRate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/login/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/login/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/register/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/register/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,8 +34,8 @@
           <entry key="css" value="1" />
           <entry key="htaccess" value="3" />
           <entry key="js" value="2" />
-          <entry key="md" value="2" />
-          <entry key="php" value="148" />
+          <entry key="md" value="3" />
+          <entry key="php" value="149" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
@@ -58,8 +43,8 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="JavaScript" value="2" />
-          <entry key="Markdown" value="6" />
-          <entry key="PHP" value="148" />
+          <entry key="Markdown" value="7" />
+          <entry key="PHP" value="149" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="htaccess" value="3" />
         </counts>
@@ -69,14 +54,14 @@
           <entry key="MD" value="332" />
           <entry key="htaccess" value="5" />
           <entry key="js" value="25" />
-          <entry key="md" value="16" />
+          <entry key="md" value="42" />
           <entry key="php" value="10751" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="25" />
-          <entry key="Markdown" value="348" />
+          <entry key="Markdown" value="374" />
           <entry key="PHP" value="10751" />
           <entry key="htaccess" value="5" />
         </counts>
@@ -95,7 +80,20 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="506">
+                <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -118,7 +116,6 @@
         <option value="$PROJECT_DIR$/11.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/README.MD" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/resources/FunctionLib.php" />
         <option value="$PROJECT_DIR$/resources/themes/default/home/learning.php" />
         <option value="$PROJECT_DIR$/resources/themes/default/home/upRate.php" />
@@ -134,6 +131,7 @@
         <option value="$PROJECT_DIR$/resources/themes/default/home/js/funny-title.js" />
         <option value="$PROJECT_DIR$/resources/LearnWords.php" />
         <option value="$PROJECT_DIR$/resources/EnterWords.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -148,8 +146,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP7.1.7" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="406" />
-    <option name="y" value="46" />
+    <option name="x" value="860" />
+    <option name="y" value="150" />
     <option name="width" value="1533" />
     <option name="height" value="926" />
   </component>
@@ -244,15 +242,16 @@
       <workItem from="1539954125613" duration="5467000" />
       <workItem from="1539964824420" duration="233000" />
       <workItem from="1540000278054" duration="13496000" />
-      <workItem from="1540018333214" duration="2610000" />
+      <workItem from="1540018333214" duration="3519000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133888000" />
+    <option name="totallyTimeSpent" value="134797000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="406" y="46" width="1533" height="926" extended-state="0" />
+    <frame x="860" y="150" width="1533" height="926" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984472" visible="true" weight="0.20230821" />
       <window_info id="Structure" order="1" sideWeight="0.5015528" side_tool="true" weight="0.18710022" />
@@ -304,27 +303,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="353">
-            <caret line="108" column="5" lean-forward="true" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/themes/default/home/upRate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -454,6 +436,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-154">
           <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="506">
+            <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

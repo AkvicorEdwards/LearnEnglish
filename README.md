@@ -16,10 +16,12 @@
 下载后，解压并上传到已经搭建好 LAMP PHP7.1 环境的服务器中
 将Database下的数据库文件learn_english.sql导入Mysql数据库
 
-
 - Github打包：https://github.com/AkvicorEdwards/LearnEnglish/archive/master.zip
 
 - Akvicor'Cloud打包：https://cloud.kvxi.org/Website/LearnEnglish.zip
+
+### 配置文件：
+![配置](https://github.com/AkvicorEdwards/LearnEnglish/raw/master/0.png)
 
 ### 界面&&使用：
 
@@ -28,6 +30,10 @@
 - 则注册页面为`demo.com/?mod=register`
 - 默认Registration Code(注册码)为`lyu`
 
+- 权限格式 `权限1 空格 权限2 空格权限3`
+- 例: `learn English demo`
+- 则用户将拥有`learn`权限`English`权限`demo`权限
+![注册](https://github.com/AkvicorEdwards/LearnEnglish/raw/master/7.png)
 
 
 使用账号密码登陆
