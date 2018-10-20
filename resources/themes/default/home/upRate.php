@@ -8,10 +8,8 @@
 
 $checkWord = $_POST["checkWord"];
 
-
 require "../../../LearnWords.php";
 $lister = new LearnWords();
-
 
 if($checkWord=="true"){
     $lister -> setIsTrue();

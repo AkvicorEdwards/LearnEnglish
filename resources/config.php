@@ -19,5 +19,4 @@ return array(
     'theme_name' => 'default',//Default theme
     'theme_display_language' => 'zh-cmn-Hans',//Display language  zh-cmn-Hans OR en
     'funny_title' => false,//On or Off Funny Title
-
 );

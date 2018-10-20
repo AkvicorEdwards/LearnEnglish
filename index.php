@@ -41,8 +41,6 @@ if( !empty($_POST["username"]) && empty($_POST["permissions"]) ){//If there is n
     }
 }
 
-
-
 /**
  * Enter words
  */
@@ -64,7 +62,6 @@ if( !empty($_POST["list"]) && !empty($_POST["content"]) ){
         echo "</script>";
     }
 }
-
 
 $checkLogin = $lister ->checkLogin();//Check result
 $config = $lister -> getConfig();//Load config

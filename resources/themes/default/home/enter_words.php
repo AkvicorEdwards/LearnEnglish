@@ -29,7 +29,6 @@
             break;
     }
 
-
 ?>
 <!doctype html>
 <html lang="<?php echo $lang ?>">
@@ -77,7 +76,6 @@
                 ?>
             </form>
         </div>
-
         <ul class="bg-bubbles">
             <li></li>
             <li></li>

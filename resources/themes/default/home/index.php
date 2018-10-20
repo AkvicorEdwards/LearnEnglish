@@ -51,7 +51,6 @@
                 <div></div>
             </form>
         </div>
-
         <ul class="bg-bubbles">
             <li></li>
             <li></li>
@@ -66,7 +65,6 @@
         </ul>
     </div>
 </div>
-
 
 <script src="resources/themes/default/login/js/jquery-2.1.1.min.js" type="text/javascript"></script>
 

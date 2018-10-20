@@ -79,6 +79,9 @@ class LearnWords
         return $newArr; //return array
     }
 
+    /**
+     * @return mysqli
+     */
     protected function create_connection()
     {
         $link = mysqli_connect($this->_config['mysql_host'], $this->_config['mysql_user'], $this->_config['mysql_password'])
@@ -444,7 +447,6 @@ class LearnWords
         $sql = "UPDATE english SET f_cont = '$f_cont', cont = '$cont', rate = '$rate' WHERE id = '$id' ";
         $result = $this -> execute_sql($link, $this->_config['mysql_user_database'], $sql);
     }
-
 
     /**
      * Get all words from a list

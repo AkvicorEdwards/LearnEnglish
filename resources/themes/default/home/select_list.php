@@ -72,10 +72,7 @@ switch ($DisplayLanguage){
                 }
                 ?>
             </form>
-
-
         </div>
-
         <ul class="bg-bubbles">
             <li></li>
             <li></li>
@@ -90,7 +87,6 @@ switch ($DisplayLanguage){
         </ul>
     </div>
 </div>
-
 
 <script src="resources/themes/default/home/js/jquery-2.1.1.min.js" type="text/javascript"></script>
 

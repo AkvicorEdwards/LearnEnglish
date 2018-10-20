@@ -321,6 +321,13 @@ class FunctionLib
         }
     }
 
+    /**
+     * Check password when login
+     *
+     * @param $user
+     * @param $password
+     * @return bool
+     */
     public function checkPassword($user,$password)
     {
         $link = $this -> create_connection();
@@ -339,12 +346,20 @@ class FunctionLib
             $_SESSION['permissions'] = $row->permissions;
 
             return true;
-
         } else {
             return false;
         }
     }
 
+    /**
+     * Write user information into database
+     *
+     * @param $regCode
+     * @param $user
+     * @param $password
+     * @param $permissions
+     * @return int
+     */
     public function registerUser($regCode,$user,$password,$permissions)
     {
         if($regCode!=$this->_config['registration_code'])//Check registration code
