@@ -14,7 +14,11 @@
 ### 下载安装：
 
 下载后，解压并上传到已经搭建好 LAMP PHP7.1 环境的服务器中
-将Database下的数据库文件learn_english.sql导入Mysql数据库
+将Database下的数据库文件`learn_english.sql`导入Mysql数据库
+
+若网站开启https则将`.htaccess`文件中的1,3,4行的注释去掉使页面强制https
+若想防止网站被搜索引擎收录则保留`robots.txt`文件,否则删除`robots.txt`文件
+
 
 - Github打包：https://github.com/AkvicorEdwards/LearnEnglish/archive/master.zip
 
