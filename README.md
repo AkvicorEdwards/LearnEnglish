@@ -21,11 +21,12 @@
 - Akvicor'Cloud打包：https://cloud.kvxi.org/Website/LearnEnglish.zip
 
 ### 配置文件：
+
 ![配置](https://github.com/AkvicorEdwards/LearnEnglish/raw/master/0.png)
 
 ### 界面&&使用：
 
-注册
+### 注册
 - 若域名为`demo.com`
 - 则注册页面为`demo.com/?mod=register`
 - 默认Registration Code(注册码)为`lyu`
@@ -33,9 +34,11 @@
 - 权限格式 `权限1 空格 权限2 空格权限3`
 - 例: `learn English demo`
 - 则用户将拥有`learn`权限`English`权限`demo`权限
+
 ![注册](https://github.com/AkvicorEdwards/LearnEnglish/raw/master/7.png)
 
 
+### 登陆
 使用账号密码登陆
 - 默认账号: `lyu`
 - 密码: `1234567`
@@ -47,6 +50,8 @@ List就是词库,默认有两个List,可以自己创建
 选择要背诵的List或者录入单词
 可以先创建List并录入单词
 
+### 选择
+
 ![选择](https://github.com/AkvicorEdwards/LearnEnglish/raw/master/2.png)
 
 - 格式:  单词1&翻译1&单词2&翻译2&单词三&翻译3…………
@@ -56,21 +61,22 @@ List就是词库,默认有两个List,可以自己创建
 - 	若List名已存在则将单词添加进原有List
 - 	若不存在则创建新List
 
+### 录入
 
 ![录入](https://github.com/AkvicorEdwards/LearnEnglish/raw/master/3.png)
 
-选择List
+### 选择List
 
 ![登陆](https://github.com/AkvicorEdwards/LearnEnglish/raw/master/4.png)
 
-目录
+### 目录
 - 点击选择学习方式
 - 或者更改List及录入单词
 
 
 ![目录](https://github.com/AkvicorEdwards/LearnEnglish/raw/master/5.png)
 
-学习界面
+### 学习界面
 - 可以点击Translate就会显示出这个单词的汉语翻译
 - 然后在Word输入框中输入英文单词 
 - 使用 ‘拼写检查’ 检查输入的是否正确
@@ -78,7 +84,6 @@ List就是词库,默认有两个List,可以自己创建
 - Word输入框不必填写,若此次背诵时拼写正确或者认识就可点击 正确 按钮使这个单词的正确次数加一并刷新显示下一个单词,点击 错误 会使这个单词的错误数量加一刷新显示下一个单词
 -   正确率等于 正确次数/(正确次数加错误次数) 初始值为0
 - 当单词正确率小于0.5时会被归入困难单词
-
 
 ![学习](https://github.com/AkvicorEdwards/LearnEnglish/raw/master/6.png)
 
