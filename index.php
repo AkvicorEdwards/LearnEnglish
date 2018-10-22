@@ -49,6 +49,7 @@ if( !empty($_POST["list"]) && !empty($_POST["content"]) ){
     $content = $_POST["content"];
     require_once "resources/EnterWords.php";
     $enter = new EnterWords();
+    $content = $lister -> trim_merge_spaces($content);
     $enterResult = $enter -> enterWords($list,$content);//Write words into database
     if($enterResult){
         echo "<script type='text/javascript'>";

@@ -19,7 +19,7 @@
 class EnterWords
 {
     // Define the application version
-    const VERSION = '1.1';
+    const VERSION = '2.1';
 
     // Reserve some variables
     protected $_appDir = null;
@@ -61,8 +61,8 @@ class EnterWords
         $tagCount = count($tag);//Array
         $link = $this->create_connection();//Create database connection
         for($i=0;$i<$tagCount;$i=$i+2){
-            $word = $tag[$i];
-            $translate = $tag[$i+1];
+            $word = $this->trim_merge_spaces($tag[$i]);
+            $translate = $this->trim_merge_spaces($tag[$i+1]);
             $sql = "insert into english ( list, word, translate) values ('$list', '$word','$translate')";
             $result = $this->execute_sql($link, $this->_config['mysql_project_database'], $sql);//Write words into database
 
@@ -100,6 +100,19 @@ class EnterWords
             $newArr[] = $value;
         }
         return $newArr; //return array
+    }
+
+    /**
+     * Merge spaces in string and trim
+     *
+     * @param $str
+     * @return null|string|string[]
+     */
+    protected function trim_merge_spaces($str)
+    {
+        $str = trim($str);
+        $str = preg_replace("/\s(?=\s)/","\\1",$str);
+        return $str;
     }
 
     /**

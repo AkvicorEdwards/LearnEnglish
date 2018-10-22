@@ -19,6 +19,8 @@
  * public execute_sql($link, $database, $sql)   return
  * public checkLogin()
  * public makeArray($str)  return
+ * public merge_spaces($str)    return
+ * public trim_merge_spaces($str)   return
  * public checkPermit($permit,$allow)  return
  * public checkPassword($user,$password)    return
  * public registerUser($regCode,$user,$password,$permissions)   return
@@ -28,7 +30,7 @@
 class FunctionLib
 {
     // Define the application version
-    const VERSION = '6.2';
+    const VERSION = '7.0';
 
     // Reserve some variables
     protected $_appDir = null;
@@ -306,6 +308,30 @@ class FunctionLib
     }
 
     /**
+     * Merge spaces in string
+     *
+     * @param $str
+     * @return null|string|string[]
+     */
+    public function merge_spaces($str)
+    {
+        return preg_replace("/\s(?=\s)/","\\1",$str);
+    }
+
+    /**
+     * Merge spaces in string and trim
+     *
+     * @param $str
+     * @return null|string|string[]
+     */
+    public function trim_merge_spaces($str)
+    {
+        $str = trim($str);
+        $str = preg_replace("/\s(?=\s)/","\\1",$str);
+        return $str;
+    }
+
+    /**
      * Check one in another
      *
      * @param $permit
@@ -370,6 +396,7 @@ class FunctionLib
         $result = $this -> execute_sql($link, $this->_config['mysql_user_database'], $sql);
         if (mysqli_num_rows($result) == 0){//If it does not exist
             $password = password_hash($password, PASSWORD_BCRYPT);
+            $permissions = $this -> trim_merge_spaces($permissions);
             $sql = "insert into users(username, password, permissions) values ('$user', '$password','$permissions')";
             $result = $this -> execute_sql($link, $this->_config['mysql_user_database'], $sql);
             if(!$result){
