@@ -132,3 +132,7 @@ List就是词库,默认有两个List,可以自己创建
 ├ .htaccess		# 网站强制https 若开启请将此文件中关于SSL的注释去掉#
 └ robots.txt	# 防搜索引擎收录 #
 ```
+
+## Copyright and license
+
+Code and documentation copyright 2018 AkvicorEdwards, released under the Apache 2.0 license.
