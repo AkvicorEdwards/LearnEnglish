@@ -96,6 +96,14 @@ if(!empty($_POST["selectList"])){
     header('location: '.$lister->getWebURL());
 }
 
+if(!empty($_POST["deleteList"])){
+    $deleteList = $_POST['deleteList'];
+    require_once "resources/EnterWords.php";
+    $enter = new EnterWords();
+    $enter -> delete_list($deleteList);
+    header('location: '.$lister->getWebURL());
+}
+
 /**
  * Load page
  */

@@ -85,6 +85,16 @@ class EnterWords
         }
     }
 
+    public function delete_list($list)
+    {
+        $link = $this -> create_connection();  //Create Mysql connection
+        $sql = "DELETE FROM english WHERE list='$list'";
+        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);  //Run SQL query
+        $sql = "DELETE FROM list_index WHERE list_name='$list'";
+        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);  //Run SQL query
+
+    }
+
     /**
      * Cut a string into an array with a space as the key
      *

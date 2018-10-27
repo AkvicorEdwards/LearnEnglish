@@ -21,6 +21,8 @@
                 if(!isset($_COOKIE["sel_list"])){
                     echo "<button   type=\"button\"   onclick=\"location.href='?mod=learning&method=SelectList'\">选择List</button>";
                     echo "<div></div>";echo "</br>";
+                    echo "<button   type=\"button\"   onclick=\"location.href='?mod=learning&method=DeleteList'\">删除List</button>";
+                    echo "<div></div>";echo "</br>";
                     echo "<button   type=\"button\"  onclick=\"location.href='?mod=learning&method=EnterWord'\">录入</button>";
                 }else{
                     echo "<div></div>";echo "</br>";
@@ -43,6 +45,8 @@
                     echo "<input  placeholder=\"其他\"  disabled>";
 
                     echo "<button  type=\"button\" onclick=\"location.href='?mod=learning&method=SelectList'\">选择List</button>";
+                    echo "<div></div>";echo "</br>";
+                    echo "<button   type=\"button\"   onclick=\"location.href='?mod=learning&method=DeleteList'\">删除List</button>";
                     echo "<div></div>";echo "</br>";
                     echo "<button  type=\"button\" onclick=\"location.href='?mod=learning&method=EnterWord'\">录入</button>";
                 }

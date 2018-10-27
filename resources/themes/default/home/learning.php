@@ -27,6 +27,15 @@ if($method=="SelectList"){
         die('ERROR: Failed to load select_list page');
     }
 }
+if($method=="DeleteList"){
+    // Load page
+    $themeDeleteList = $lister->getThemePath(true) . '/home/delete_list.php';//delete_list page
+    if (file_exists($themeDeleteList)) {
+        include($themeDeleteList);
+    } else {
+        die('ERROR: Failed to load delete_list page');
+    }
+}
 
 if($method=="List"){
     // Load page

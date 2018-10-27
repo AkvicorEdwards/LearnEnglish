@@ -424,7 +424,7 @@ class LearnWords
         $cont = $_SESSION['cont'] + 1;
         $rate = $r_cont/$cont;
         $sql = "UPDATE english SET r_cont = '$r_cont', cont = '$cont', rate = '$rate' WHERE id = '$id' ";
-        $result = $this -> execute_sql($link, $this->_config['mysql_user_database'], $sql);
+        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
     }
 
     /**
@@ -445,7 +445,7 @@ class LearnWords
         $cont = $_SESSION['cont'] + 1;
         $rate = $_SESSION['r_cont']/$cont;
         $sql = "UPDATE english SET f_cont = '$f_cont', cont = '$cont', rate = '$rate' WHERE id = '$id' ";
-        $result = $this -> execute_sql($link, $this->_config['mysql_user_database'], $sql);
+        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
     }
 
     /**
@@ -457,7 +457,7 @@ class LearnWords
     {
         $link = $this -> create_connection();
         $sql = "SELECT * FROM list_index";
-        $result = $this -> execute_sql($link, $this->_config['mysql_user_database'], $sql);
+        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
         return $result;
     }
 
