@@ -121,7 +121,7 @@ class LearnWords
         $list = $_COOKIE["sel_list"];//Get selected list
         $link = $this -> create_connection();  //Create Mysql connection
 
-        $sql = "SELECT * FROM english WHERE list='$list' ORDER BY RAND() LIMIT 1";
+        $sql = "SELECT * FROM words WHERE lists='$list' ORDER BY RAND() LIMIT 1";
         $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);  //Run SQL query
         $row = mysqli_fetch_object($result);//Get result
 
@@ -134,9 +134,9 @@ class LearnWords
         $_SESSION['id'] = $row->id;
         $_SESSION['words'] = $row->word;
         $_SESSION['translate'] = $row->translate;
-        $_SESSION['r_cont'] = $row->r_cont;
-        $_SESSION['f_cont'] = $row->f_cont;
-        $_SESSION['cont'] = $row->cont;
+        $_SESSION['r_count'] = $row->r_count;
+        $_SESSION['f_count'] = $row->f_count;
+        $_SESSION['a_count'] = $row->a_count;
         $_SESSION['rate'] = $row->rate;
 
     }
@@ -152,7 +152,7 @@ class LearnWords
 
         //Set begin id
         if(!isset($_SESSION['BeginID2'])||$_SESSION['BeginID2']>$_SESSION['EndID2']){   //Set BeginID2
-            $sql = "SELECT * FROM english WHERE list='$list' ORDER BY id ASC LIMIT 1";
+            $sql = "SELECT * FROM words WHERE lists='$list' ORDER BY id ASC LIMIT 1";
             $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
             $row = mysqli_fetch_object($result);    //Get result
             $_SESSION['BeginID2']=$row->id;
@@ -160,7 +160,7 @@ class LearnWords
 
         //Set end id
         if(!isset($_SESSION['EndID2'])){    //Set EndID2
-            $sql = "SELECT * FROM english WHERE list='$list' ORDER BY id DESC LIMIT 1";
+            $sql = "SELECT * FROM words WHERE lists='$list' ORDER BY id DESC LIMIT 1";
             $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
             $row = mysqli_fetch_object($result);   //Get result
             $_SESSION['EndID2']=$row->id;
@@ -168,7 +168,7 @@ class LearnWords
 
         //Get current word content
         $beginId2 = $_SESSION['BeginID2'];
-        $sql = "SELECT * FROM english WHERE id='$beginId2'";
+        $sql = "SELECT * FROM words WHERE id='$beginId2'";
         $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
         //Set cookie ,to show information in page
         if(mysqli_num_rows($result) == 0){
@@ -181,9 +181,9 @@ class LearnWords
         $_SESSION['id'] = $row->id;
         $_SESSION['words'] = $row->word;
         $_SESSION['translate'] = $row->translate;
-        $_SESSION['r_cont'] = $row->r_cont;
-        $_SESSION['f_cont'] = $row->f_cont;
-        $_SESSION['cont'] = $row->cont;
+        $_SESSION['r_count'] = $row->r_count;
+        $_SESSION['f_count'] = $row->f_count;
+        $_SESSION['a_count'] = $row->a_count;
         $_SESSION['rate'] = $row->rate;
     }
 
@@ -195,7 +195,7 @@ class LearnWords
         session_start();
         $link = $this -> create_connection();  //Create Mysql connection
 
-        $sql = "SELECT * FROM english ORDER BY RAND() LIMIT 1";
+        $sql = "SELECT * FROM words ORDER BY RAND() LIMIT 1";
         $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);  //Run SQL query
         $row = mysqli_fetch_object($result);//Get result
 
@@ -208,9 +208,9 @@ class LearnWords
         $_SESSION['id'] = $row->id;
         $_SESSION['words'] = $row->word;
         $_SESSION['translate'] = $row->translate;
-        $_SESSION['r_cont'] = $row->r_cont;
-        $_SESSION['f_cont'] = $row->f_cont;
-        $_SESSION['cont'] = $row->cont;
+        $_SESSION['r_count'] = $row->r_count;
+        $_SESSION['f_count'] = $row->f_count;
+        $_SESSION['a_count'] = $row->a_count;
         $_SESSION['rate'] = $row->rate;
     }
 
@@ -220,12 +220,11 @@ class LearnWords
     public function method_4()
     {
         session_start();
-        $list = $_COOKIE["sel_list"];//Get selected list
         $link = $this -> create_connection();//Create Mysql connection
 
         //Set BeginID
         if(!isset($_SESSION['BeginID4'])||$_SESSION['BeginID4']>$_SESSION['EndID4']){   //Set BeginID4
-            $sql = "SELECT * FROM english ORDER BY id ASC LIMIT 1";
+            $sql = "SELECT * FROM words ORDER BY id ASC LIMIT 1";
             $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
             $row = mysqli_fetch_object($result);    //Get result
             $_SESSION['BeginID4']=$row->id;
@@ -233,7 +232,7 @@ class LearnWords
 
         //Set EndID
         if(!isset($_SESSION['EndID4'])){    //Set EndID2
-            $sql = "SELECT * FROM english ORDER BY id DESC LIMIT 1";
+            $sql = "SELECT * FROM words ORDER BY id DESC LIMIT 1";
             $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
             $row = mysqli_fetch_object($result);   //Get result
             $_SESSION['EndID4']=$row->id;
@@ -241,7 +240,7 @@ class LearnWords
 
         //Get current word content
         $beginId4 = $_SESSION['BeginID4'];
-        $sql = "SELECT * FROM english WHERE id='$beginId4'";
+        $sql = "SELECT * FROM words WHERE id='$beginId4'";
         $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
         //Set cookie ,to show information in page
         if(mysqli_num_rows($result) == 0){
@@ -254,9 +253,9 @@ class LearnWords
         $_SESSION['id'] = $row->id;
         $_SESSION['words'] = $row->word;
         $_SESSION['translate'] = $row->translate;
-        $_SESSION['r_cont'] = $row->r_cont;
-        $_SESSION['f_cont'] = $row->f_cont;
-        $_SESSION['cont'] = $row->cont;
+        $_SESSION['r_count'] = $row->r_count;
+        $_SESSION['f_count'] = $row->f_count;
+        $_SESSION['a_count'] = $row->a_count;
         $_SESSION['rate'] = $row->rate;
     }
     public function method_5()
@@ -265,7 +264,7 @@ class LearnWords
         $list = $_COOKIE["sel_list"];//Get selected list
         $link = $this -> create_connection();  //Create Mysql connection
 
-        $sql = "SELECT * FROM english WHERE (rate<0.5) And (list='$list') ORDER BY RAND() LIMIT 1";
+        $sql = "SELECT * FROM words WHERE (rate<0.5) And (lists='$list') ORDER BY RAND() LIMIT 1";
         $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);  //Run SQL query
         $row = mysqli_fetch_object($result);//Get result
 
@@ -278,9 +277,9 @@ class LearnWords
         $_SESSION['id'] = $row->id;
         $_SESSION['words'] = $row->word;
         $_SESSION['translate'] = $row->translate;
-        $_SESSION['r_cont'] = $row->r_cont;
-        $_SESSION['f_cont'] = $row->f_cont;
-        $_SESSION['cont'] = $row->cont;
+        $_SESSION['r_count'] = $row->r_count;
+        $_SESSION['f_count'] = $row->f_count;
+        $_SESSION['a_count'] = $row->a_count;
         $_SESSION['rate'] = $row->rate;
     }
     public function method_6()
@@ -291,7 +290,7 @@ class LearnWords
 
         //Set begin id
         if(!isset($_SESSION['BeginID6'])||$_SESSION['BeginID6']>$_SESSION['EndID6']){   //Set BeginID6
-            $sql = "SELECT * FROM english WHERE (rate<0.5) And (list='$list') ORDER BY id ASC LIMIT 1";
+            $sql = "SELECT * FROM words WHERE (rate<0.5) And (lists='$list') ORDER BY id ASC LIMIT 1";
             $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
             $row = mysqli_fetch_object($result);    //Get result
             $_SESSION['BeginID6']=$row->id-0.5;
@@ -299,7 +298,7 @@ class LearnWords
 
         //Set end id
         if(!isset($_SESSION['EndID6'])){    //Set EndID2
-            $sql = "SELECT * FROM english WHERE (rate<0.5) And (list='$list') ORDER BY id DESC LIMIT 1";
+            $sql = "SELECT * FROM words WHERE (rate<0.5) And (lists='$list') ORDER BY id DESC LIMIT 1";
             $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
             $row = mysqli_fetch_object($result);   //Get result
             $_SESSION['EndID6']=$row->id;
@@ -308,7 +307,7 @@ class LearnWords
         //Get current word content
         $beginId6 = $_SESSION['BeginID6'];
 
-        $sql = "SELECT * FROM english WHERE (id>'$beginId6') AND (rate<0.5) AND (list='$list') LIMIT 1";
+        $sql = "SELECT * FROM words WHERE (id>'$beginId6') AND (rate<0.5) AND (lists='$list') LIMIT 1";
         $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
         //Set cookie ,to show information in page
         if(mysqli_num_rows($result) == 0){
@@ -321,9 +320,9 @@ class LearnWords
         $_SESSION['id'] = $row->id;
         $_SESSION['words'] = $row->word;
         $_SESSION['translate'] = $row->translate;
-        $_SESSION['r_cont'] = $row->r_cont;
-        $_SESSION['f_cont'] = $row->f_cont;
-        $_SESSION['cont'] = $row->cont;
+        $_SESSION['r_count'] = $row->r_count;
+        $_SESSION['f_count'] = $row->f_count;
+        $_SESSION['a_count'] = $row->a_count;
         $_SESSION['rate'] = $row->rate;
     }
     public function method_7()
@@ -331,7 +330,7 @@ class LearnWords
         session_start();
         $link = $this -> create_connection();  //Create Mysql connection
 
-        $sql = "SELECT * FROM english WHERE rate<0.5 ORDER BY RAND() LIMIT 1";
+        $sql = "SELECT * FROM words WHERE rate<0.5 ORDER BY RAND() LIMIT 1";
         $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);  //Run SQL query
         $row = mysqli_fetch_object($result);//Get result
 
@@ -344,21 +343,20 @@ class LearnWords
         $_SESSION['id'] = $row->id;
         $_SESSION['words'] = $row->word;
         $_SESSION['translate'] = $row->translate;
-        $_SESSION['r_cont'] = $row->r_cont;
-        $_SESSION['f_cont'] = $row->f_cont;
-        $_SESSION['cont'] = $row->cont;
+        $_SESSION['r_count'] = $row->r_count;
+        $_SESSION['f_count'] = $row->f_count;
+        $_SESSION['a_count'] = $row->a_count;
         $_SESSION['rate'] = $row->rate;
     }
 
     public function method_8()
     {
         session_start();
-        $list = $_COOKIE["sel_list"];//Get selected list
         $link = $this -> create_connection();//Create Mysql connection
 
         //Set begin id
         if(!isset($_SESSION['BeginID8'])||$_SESSION['BeginID8']>$_SESSION['EndID8']){   //Set BeginID8
-            $sql = "SELECT * FROM english WHERE (rate<0.5) ORDER BY id ASC LIMIT 1";
+            $sql = "SELECT * FROM words WHERE (rate<0.5) ORDER BY id ASC LIMIT 1";
             $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
             $row = mysqli_fetch_object($result);    //Get result
             $_SESSION['BeginID8']=$row->id-0.5;
@@ -366,7 +364,7 @@ class LearnWords
 
         //Set end id
         if(!isset($_SESSION['EndID8'])){    //Set EndID2
-            $sql = "SELECT * FROM english WHERE (rate<0.5) ORDER BY id DESC LIMIT 1";
+            $sql = "SELECT * FROM words WHERE (rate<0.5) ORDER BY id DESC LIMIT 1";
             $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
             $row = mysqli_fetch_object($result);   //Get result
             $_SESSION['EndID8']=$row->id;
@@ -375,7 +373,7 @@ class LearnWords
         //Get current word content
         $beginId8 = $_SESSION['BeginID8'];
 
-        $sql = "SELECT * FROM english WHERE (id>'$beginId8') AND (rate<0.5) LIMIT 1";
+        $sql = "SELECT * FROM words WHERE (id>'$beginId8') AND (rate<0.5) LIMIT 1";
         $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
         //Set cookie ,to show information in page
         if(mysqli_num_rows($result) == 0){
@@ -388,16 +386,16 @@ class LearnWords
         $_SESSION['id'] = $row->id;
         $_SESSION['words'] = $row->word;
         $_SESSION['translate'] = $row->translate;
-        $_SESSION['r_cont'] = $row->r_cont;
-        $_SESSION['f_cont'] = $row->f_cont;
-        $_SESSION['cont'] = $row->cont;
+        $_SESSION['r_count'] = $row->r_count;
+        $_SESSION['f_count'] = $row->f_count;
+        $_SESSION['a_count'] = $row->a_count;
         $_SESSION['rate'] = $row->rate;
     }
 
     public function list_list($list)
     {
         $link = $this -> create_connection();  //Create Mysql connection
-        $sql = "SELECT * FROM english WHERE list='$list'";
+        $sql = "SELECT * FROM words WHERE lists='$list'";
         $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);  //Run SQL query
         //Set cookie ,to show information in page
         if(mysqli_num_rows($result) == 0){  //if result does not exist
@@ -420,11 +418,11 @@ class LearnWords
         session_start();
         $link = $this -> create_connection();
         $id = $_SESSION['id'];
-        $r_cont = $_SESSION['r_cont'] + 1;
-        $cont = $_SESSION['cont'] + 1;
-        $rate = $r_cont/$cont;
-        $sql = "UPDATE english SET r_cont = '$r_cont', cont = '$cont', rate = '$rate' WHERE id = '$id' ";
-        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+        $r_count = $_SESSION['r_count'] + 1;
+        $a_count = $_SESSION['a_count'] + 1;
+        $rate = $r_count/$a_count;
+        $sql = "UPDATE words SET r_count = '$r_count', a_count = '$a_count', rate = '$rate' WHERE id = '$id' ";
+        $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
     }
 
     /**
@@ -441,11 +439,11 @@ class LearnWords
         session_start();
         $link = $this -> create_connection();
         $id = $_SESSION['id'];
-        $f_cont = $_SESSION['f_cont'] + 1;
-        $cont = $_SESSION['cont'] + 1;
-        $rate = $_SESSION['r_cont']/$cont;
-        $sql = "UPDATE english SET f_cont = '$f_cont', cont = '$cont', rate = '$rate' WHERE id = '$id' ";
-        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
+        $f_count = $_SESSION['f_count'] + 1;
+        $a_count = $_SESSION['a_count'] + 1;
+        $rate = $_SESSION['r_count']/$a_count;
+        $sql = "UPDATE words SET f_count = '$f_count', a_count = '$a_count', rate = '$rate' WHERE id = '$id' ";
+        $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);
     }
 
     /**

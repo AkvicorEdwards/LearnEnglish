@@ -19,7 +19,7 @@
 class EnterWords
 {
     // Define the application version
-    const VERSION = '2.1';
+    const VERSION = '2.3';
 
     // Reserve some variables
     protected $_appDir = null;
@@ -63,7 +63,7 @@ class EnterWords
         for($i=0;$i<$tagCount;$i=$i+2){
             $word = $this->trim_merge_spaces($tag[$i]);
             $translate = $this->trim_merge_spaces($tag[$i+1]);
-            $sql = "insert into english ( list, word, translate) values ('$list', '$word','$translate')";
+            $sql = "insert into words ( lists, word, translate) values ('$list', '$word','$translate')";
             $result = $this->execute_sql($link, $this->_config['mysql_project_database'], $sql);//Write words into database
 
             $sql = "SELECT * FROM list_index WHERE list_name = '$list'";//Record list name and number of words
@@ -72,10 +72,10 @@ class EnterWords
                 $list_name = $row['list_name'];
                 $total = $row['total']+1;
                 $sql = "UPDATE list_index SET total='$total' WHERE list_name='$list_name'";
-                $result2 = $this->execute_sql($link, $this->_config['mysql_project_database'], $sql);
+                $this->execute_sql($link, $this->_config['mysql_project_database'], $sql);
             }else{//If list name does not exist
                 $sql = "insert into list_index (list_name,total) values ('$list','1')";
-                $result2 = $this->execute_sql($link, $this->_config['mysql_project_database'], $sql);
+                $this->execute_sql($link, $this->_config['mysql_project_database'], $sql);
             }
         }
         if(!$result){
@@ -88,10 +88,10 @@ class EnterWords
     public function delete_list($list)
     {
         $link = $this -> create_connection();  //Create Mysql connection
-        $sql = "DELETE FROM english WHERE list='$list'";
-        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);  //Run SQL query
+        $sql = "DELETE FROM words WHERE lists='$list'";
+        $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);  //Run SQL query
         $sql = "DELETE FROM list_index WHERE list_name='$list'";
-        $result = $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);  //Run SQL query
+        $this -> execute_sql($link, $this->_config['mysql_project_database'], $sql);  //Run SQL query
 
     }
 

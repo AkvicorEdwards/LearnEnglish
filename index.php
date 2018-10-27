@@ -79,9 +79,9 @@ if(!empty($_POST["selectList"])){
     unset($_SESSION['id']);
     unset($_SESSION['words']);
     unset($_SESSION['translate']);
-    unset($_SESSION['r_cont']);
-    unset($_SESSION['f_cont']);
-    unset($_SESSION['cont']);
+    unset($_SESSION['r_count']);
+    unset($_SESSION['f_count']);
+    unset($_SESSION['a_count']);
     unset($_SESSION['rate']);
     unset($_SESSION['BeginID2']);
     unset($_SESSION['EndID2']);

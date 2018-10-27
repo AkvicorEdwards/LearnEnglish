@@ -5,23 +5,6 @@
  * Date: 2018/10/19
  * Time: 18:53
  */
-//Select language
-switch ($DisplayLanguage){
-    case "zh-cmn-Hans":
-        $lang = "zh-cmn-Hans";
-        $is1 = "回主页";
-        $is2 = "词库";
-        $is3 = "已存在的单词";
-        $is4 = "单词 翻译(正确率)";
-        break;
-    case "en":
-        $lang = "en";
-        $is1 = "Back Home";
-        $is2 = "List";
-        $is3 = "Existed Words";
-        $is4 = "Word Translate(CorrectRate)";
-        break;
-}
 
 $listList = $_GET['list'];
 require "resources/LearnWords.php";
@@ -30,13 +13,13 @@ $result = $learn->list_list($listList);
 $total_records = mysqli_num_rows($result);
 ?>
 <!doctype html>
-<html lang="<?php echo $lang ?>">
+<html lang="en">
 <head>
     <meta name="theme-color" content="#1E90FF">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $is2 ?> <?php echo $listList; ?></title>
+    <title>List: <?php echo $listList; ?></title>
     <link rel="icon" href="resources/themes/default/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="resources/themes/default/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="resources/themes/default/home/css/styles.css">
@@ -45,13 +28,13 @@ $total_records = mysqli_num_rows($result);
 <div class="htmleaf-container">
     <div class="wrapper" style='OVERFLOW: auto; '>
         <div class="container">
-            <h1><?php echo $is2 ?> <?php echo $listList; ?></h1>
+            <h1>List: <?php echo $listList; ?></h1>
             <form class="form">
-                <button  type="button" onclick="location.href='?'"><?php echo $is1 ?></button>
+                <button  type="button" onclick="location.href='?'">Back Home</button>
             </form>
             <form class="form" action="" method="post">
-                <input  type="text" placeholder="<?php echo $is3 ?>" disabled>
-                <input  type="text" placeholder="<?php echo $is4 ?>" value="<?php echo $is4 ?>" readonly>
+                <input  type="text" placeholder="Existed Words" disabled>
+                <input  type="text" placeholder="Word Translate(CorrectRate)" value="Word Translate(CorrectRate)" readonly>
                 <?php
                 /**
                  * Output existing words from List

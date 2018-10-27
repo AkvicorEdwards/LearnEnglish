@@ -30,7 +30,7 @@
 class FunctionLib
 {
     // Define the application version
-    const VERSION = '7.0';
+    const VERSION = '7.1';
 
     // Reserve some variables
     protected $_appDir = null;
@@ -360,7 +360,7 @@ class FunctionLib
         $sql = "SELECT * FROM users WHERE username = '$user'";
         $result = $this -> execute_sql($link, $this->_config['mysql_user_database'], $sql);
         $row = mysqli_fetch_object($result);
-        $userPassword = $row->password;//Get password from database
+        $userPassword = $row->user_password;//Get password from database
 
         if (password_verify($password , $userPassword))
         {
@@ -368,8 +368,8 @@ class FunctionLib
             session_start();
             $_SESSION['id'] = $row->id;
             $_SESSION['userName'] = $row->username;
-            $_SESSION['password'] = $row->password;
-            $_SESSION['permissions'] = $row->permissions;
+            $_SESSION['password'] = $row->user_password;
+            $_SESSION['permissions'] = $row->user_permissions;
 
             return true;
         } else {
@@ -397,7 +397,7 @@ class FunctionLib
         if (mysqli_num_rows($result) == 0){//If it does not exist
             $password = password_hash($password, PASSWORD_BCRYPT);
             $permissions = $this -> trim_merge_spaces($permissions);
-            $sql = "insert into users(username, password, permissions) values ('$user', '$password','$permissions')";
+            $sql = "insert into users(username, user_password, user_permissions) values ('$user', '$password','$permissions')";
             $result = $this -> execute_sql($link, $this->_config['mysql_user_database'], $sql);
             if(!$result){
                 return 0;//Register failure

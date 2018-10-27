@@ -12,11 +12,10 @@ return array(
     'registration_code' => 'lyu',// Permitted permission
     'mysql_host'=>'localhost',//database config
     'mysql_user'=>'root',//database config
-    'mysql_password'=>'password123',//Database config
-    'mysql_user_database' => 'learn_english',//User information database
-    'mysql_project_database' => 'learn_english',//Project database
+    'mysql_password'=>'password',//Database config
+    'mysql_user_database' => 'kvxi',//User information database
+    'mysql_project_database' => 'kvxi_learn',//Project database
     'website_title'=>'Learn English',//Website Title
     'theme_name' => 'default',//Default theme
-    'theme_display_language' => 'zh-cmn-Hans',//Display language  zh-cmn-Hans OR en
     'funny_title' => false,//On or Off Funny Title
 );
