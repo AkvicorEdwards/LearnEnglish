@@ -69,7 +69,8 @@ class FunctionLib
     }
 
     /**
-     * @return mixed|null
+     * Get config
+     * @return mixed|null config
      */
     public function getConfig()
     {

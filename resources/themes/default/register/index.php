@@ -22,7 +22,12 @@
                 <input name="permissions" type="text" placeholder="Permissions" value="" required>
                 <button type="submit" id="login-button" name="submit">Sign up</button>
             </form>
+            <form class="form">
+                <button  type="button" onclick="location.href='?'">Back Home</button>
+            </form>
         </div>
+
+
 
         <ul class="bg-bubbles">
             <li></li>

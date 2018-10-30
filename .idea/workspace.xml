@@ -2,19 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="99b9db80-c329-429a-b1f0-cca30a2cfbbb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/EnterWords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/EnterWords.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/FunctionLib.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/FunctionLib.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/LearnWords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/LearnWords.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/delete_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/delete_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/enter_words.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/enter_words.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/learn_words.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/learn_words.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/list.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/home/select_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/home/select_list.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/themes/default/login/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/login/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/themes/default/register/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/themes/default/register/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,21 +17,21 @@
     <session id="2100891753">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="24" />
-          <entry key="project.open.time.0" value="3" />
+          <entry key="project.closed" value="29" />
+          <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.3" value="4" />
           <entry key="project.open.time.4" value="4" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="5" />
-          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.8" value="2" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.opened" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -53,7 +43,7 @@
           <entry key="htaccess" value="3" />
           <entry key="js" value="4" />
           <entry key="md" value="7" />
-          <entry key="php" value="281" />
+          <entry key="php" value="290" />
           <entry key="png" value="1" />
           <entry key="txt" value="2" />
         </counts>
@@ -64,7 +54,7 @@
           <entry key="Image" value="1" />
           <entry key="JavaScript" value="4" />
           <entry key="Markdown" value="11" />
-          <entry key="PHP" value="281" />
+          <entry key="PHP" value="290" />
           <entry key="PLAIN_TEXT" value="7" />
           <entry key="htaccess" value="3" />
         </counts>
@@ -75,14 +65,14 @@
           <entry key="htaccess" value="5" />
           <entry key="js" value="25" />
           <entry key="md" value="111" />
-          <entry key="php" value="11695" />
+          <entry key="php" value="11752" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JavaScript" value="25" />
           <entry key="Markdown" value="443" />
-          <entry key="PHP" value="11695" />
+          <entry key="PHP" value="11752" />
           <entry key="htaccess" value="5" />
         </counts>
       </usages-collector>
@@ -101,11 +91,56 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/LearnWords.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9724">
+              <caret line="447" selection-start-line="447" selection-end-line="447" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/themes/default/home/delete_list.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="836">
+              <caret line="38" column="164" selection-start-line="38" selection-start-column="164" selection-end-line="38" selection-end-column="164" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/FunctionLib.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-748">
+              <caret line="319" column="5" lean-forward="true" selection-start-line="319" selection-start-column="5" selection-end-line="319" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+            <state relative-caret-position="198">
+              <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/themes/default/register/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -146,13 +181,13 @@
         <option value="$PROJECT_DIR$/resources/themes/default/home/learn_words.php" />
         <option value="$PROJECT_DIR$/resources/themes/default/home/list.php" />
         <option value="$PROJECT_DIR$/resources/themes/default/login/index.php" />
-        <option value="$PROJECT_DIR$/resources/themes/default/register/index.php" />
         <option value="$PROJECT_DIR$/resources/themes/default/home/enter_words.php" />
-        <option value="$PROJECT_DIR$/resources/FunctionLib.php" />
         <option value="$PROJECT_DIR$/resources/themes/default/home/select_list.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/resources/EnterWords.php" />
         <option value="$PROJECT_DIR$/resources/LearnWords.php" />
+        <option value="$PROJECT_DIR$/resources/FunctionLib.php" />
+        <option value="$PROJECT_DIR$/resources/themes/default/register/index.php" />
         <option value="$PROJECT_DIR$/resources/config.php" />
       </list>
     </option>
@@ -168,8 +203,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP7.1.7" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="676" />
-    <option name="y" value="38" />
+    <option name="x" value="-403" />
+    <option name="y" value="110" />
     <option name="width" value="1296" />
     <option name="height" value="823" />
   </component>
@@ -276,18 +311,23 @@
       <workItem from="1540557822554" duration="27000" />
       <workItem from="1540558141025" duration="4652000" />
       <workItem from="1540602070826" duration="11182000" />
-      <workItem from="1540633227085" duration="8023000" />
+      <workItem from="1540633227085" duration="8151000" />
+      <workItem from="1540646937672" duration="737000" />
+      <workItem from="1540730162683" duration="1035000" />
+      <workItem from="1540813043448" duration="720000" />
+      <workItem from="1540898418951" duration="234000" />
+      <workItem from="1540901192668" duration="1453000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168509000" />
+    <option name="totallyTimeSpent" value="172816000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="676" y="38" width="1296" height="823" extended-state="0" />
+    <frame x="-403" y="110" width="1296" height="823" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984472" visible="true" weight="0.25323623" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984472" visible="true" weight="0.27346277" />
       <window_info id="Structure" order="1" sideWeight="0.5015528" side_tool="true" weight="0.18710022" />
       <window_info id="Favorites" order="2" sideWeight="0.5015528" side_tool="true" weight="0.18710022" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3298647" />
@@ -388,56 +428,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/themes/default/register/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="28" lean-forward="true" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-563">
-          <caret line="83" column="32" lean-forward="true" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/FunctionLib.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-299">
-          <caret line="364" column="43" lean-forward="true" selection-start-line="364" selection-start-column="43" selection-end-line="364" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/LearnWords.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="447" lean-forward="true" selection-start-line="447" selection-end-line="447" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/themes/default/home/delete_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="38" column="164" selection-start-line="38" selection-start-column="164" selection-end-line="38" selection-end-column="164" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/themes/default/home/enter_words.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-695" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/themes/default/home/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-299">
-          <caret line="28" column="121" lean-forward="true" selection-start-line="28" selection-start-column="121" selection-end-line="28" selection-end-column="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/themes/default/home/learn_words.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1267" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/themes/default/home/learning.php">
@@ -475,10 +468,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/themes/default/home/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-176">
+          <caret line="28" column="121" selection-start-line="28" selection-start-column="121" selection-end-line="28" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/themes/default/home/learn_words.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="34" column="12" selection-start-line="34" selection-start-column="12" selection-end-line="36" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/LearnWords.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9724">
+          <caret line="447" selection-start-line="447" selection-end-line="447" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/themes/default/home/delete_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="38" column="164" selection-start-line="38" selection-start-column="164" selection-end-line="38" selection-end-column="164" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        <state relative-caret-position="198">
+          <caret line="14" column="53" lean-forward="true" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/FunctionLib.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-748">
+          <caret line="319" column="5" lean-forward="true" selection-start-line="319" selection-start-column="5" selection-end-line="319" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/themes/default/register/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
         </state>
       </provider>
     </entry>
